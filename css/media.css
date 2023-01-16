@@ -11,10 +11,10 @@
 }
 
 .header_nav_ul_li a:focus,
-.btn_lk:focus,
-.second_nav_menu p:focus,
-.list--item__btn:focus,
-.list--item__btn svg:focus {
+.btn_lk:focus-visible,
+.second_nav_menu p:focus-visible,
+.list--item__btn:focus-visible,
+.list--item__btn svg:focus-visible {
     background-color: var(--hard-purple);
     color: var(--white);
 }
@@ -41,6 +41,22 @@
     color: var(--hard-purple);
     background-color: transparent;
 }
+
+.btn_search2:hover svg path,
+.btn_search2:hover svg rect {
+    fill: var(--light-purple);
+}
+
+.btn_search2:focus-visible svg path,
+.btn_search2:focus-visible svg rect {
+     fill: var(--purple);
+}
+
+.btn_search2:active svg path,
+.btn_search2:active svg rect {
+    fill: var(--hard-purple)
+}
+
 
 
 /* second nav dropdown */
@@ -78,9 +94,15 @@
     border-radius: 100px;
 }
 
+/* GAllERY */
+
 .choices__inner:hover,
-.choices__inner:focus,
+.choices__inner:focus-visible,
 .choices__inner:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.choices__item:focus-within {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -145,23 +167,48 @@
 }
 
 .swiper-button-prev_event:hover,
-.swiper-button-next_event:hover {
+.swiper-button-next_event:hover,
+.swiper-button-prev_project:hover,
+.swiper-button-next_project:hover {
     background-color: var(--super-light-purple);
 }
 
 .swiper-button-prev_event:active,
-.swiper-button-next_event:active {
+.swiper-button-next_event:active,
+.swiper-button-prev_project:active,
+.swiper-button-next_project:active {
     background-color: var(--super-light-purple);
     border: 2px solid var(--purple);
 }
 
 .swiper-button-prev_event:focus:not(:active),
-.swiper-button-next_event:focus:not(:active) {
+.swiper-button-next_event:focus:not(:active),
+.swiper-button-prev_project:focus:not(:active),
+.swiper-button-next_project:focus:not(:active) {
     background-color: var(--white);
     border: 2px solid var(--purple);
 }
 
-@media (max-width: 1449px) {
+.swiper-slide_project:hover img {
+    filter: grayscale(0%);
+}
+
+.swiper-slide_project:active {
+    border-color: var(--purple);
+}
+
+.swiper-slide_project:focus:not(:active) {
+    border-color: var(--purple);
+}
+
+.swiper-slide_project:focus:not(:active) img {
+    filter: grayscale(100%);
+}
+
+
+/* PROJECTS UI */
+ 
+@media (max-width: 1336px) {
     .header {
         margin-bottom: 48px;
     }
@@ -219,12 +266,7 @@
         transform: translateX(0);
         opacity: 1;
     }
-    .burger_active {
-        display: block;
-        position: absolute;
-        top: 36px;
-        left: 50px;
-    }
+    
     .logo {
         padding-top: 11px;
         padding-right: 28px;
@@ -241,7 +283,14 @@
         height: 28px;
         cursor: url(/img/cursor.png), auto;
     }
-    /* FORM SEARCH */
+    .burger_active {
+        display: block;
+        position: absolute;
+        top: 36px;
+        left: 50px;
+    }
+
+        /* FORM SEARCH */
     .header_search {
         position: static;
         overflow: hidden;
@@ -277,8 +326,9 @@
         opacity: 1;
         width: 314px;
         position: absolute;
-        top: 18%;
-        right: 4.5%;
+        padding: 0;
+        top: 24%;
+        right: 5%;
     }
     .input_search.active {
         width: 100%;
@@ -324,17 +374,18 @@
         margin-right: 3px;
     }
     .hero .container {
-        padding-top: 158px;
+        padding-top: 157px;
     }
     .hero_text {
         max-width: 80%;
+        margin-left: 0;
     }
     .hero_content {
-        padding-bottom: 115px;
+        padding-bottom: 114px;
     }
     .hero_content p {
         margin-top: -10px;
-        margin-bottom: 134px;
+        margin-bottom: 133px;
     }
     .swiper-slide-1 {
         background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2_1024.jpg);
