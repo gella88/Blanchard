@@ -232,21 +232,22 @@
 
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
-    opacity: .35;
-    cursor: auto;
+    opacity: 1;
+    cursor: url(img/cursor.png), auto;
     pointer-events: none
 }
 
 .swiper-button-next.swiper-button-hidden,
 .swiper-button-prev.swiper-button-hidden {
     opacity: 0;
-    cursor: auto;
+    cursor: url(img/cursor.png), auto;
     pointer-events: none
 }
 
 .swiper-navigation-disabled .swiper-button-next,
 .swiper-navigation-disabled .swiper-button-prev {
-    display: none!important
+    display: none;
+    
 }
 
 .swiper-button-next:after,

@@ -1,41 +1,41 @@
 // BURGER-MENU
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#burger').addEventListener('click', function() {
+window.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#burger').addEventListener('click', function () {
         document.querySelector('#header_nav').classList.add('header_nav_active')
     })
 });
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.burger_active').addEventListener('click', function() {
+window.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.burger_active').addEventListener('click', function () {
         document.querySelector('#header_nav').classList.remove('header_nav_active')
     })
 });
 
 // SEARCH - FORM
 
-document.querySelector(".btn_search").addEventListener("click", function() {
+document.querySelector(".btn_search").addEventListener("click", function () {
     document.querySelector(".nav_form").classList.add('nav_form_active');
     this.classList.add("active");
 })
 
-document.querySelector(".search_x").addEventListener("click", function() {
+document.querySelector(".search_x").addEventListener("click", function () {
     document.querySelector(".nav_form").classList.remove('nav_form_active');
     this.classList.remove("active");
 })
 
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#search_x').addEventListener('click', function() {
+window.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#search_x').addEventListener('click', function () {
         document.querySelector(".btn_search").classList.remove("active")
     })
 });
 
 
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#search').addEventListener('click', function() {
+window.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#search').addEventListener('click', function () {
         document.querySelector('#nav_form').classList.add('nav_form_active')
     })
 });
-window.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#search_x').addEventListener('click', function() {
+window.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#search_x').addEventListener('click', function () {
         document.querySelector('#nav_form').classList.remove('nav_form_active')
     })
 });
@@ -43,9 +43,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 // DROPDOWN MENU - SECOND NAVIGATION
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".list--item__btn").forEach(item => {
-        item.addEventListener("click", function() {
+        item.addEventListener("click", function () {
             let btn = this;
             let dropdown = this.parentElement.querySelector(".container--dropdown");
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     })
 
-    document.addEventListener("click", function(e) {
+    document.addEventListener("click", function (e) {
         let target = e.target;
         if (!target.closest(".list")) {
             document.querySelectorAll(".container--dropdown").forEach(el => {
@@ -90,13 +90,14 @@ document.querySelectorAll(".dropdown__simplebar").forEach(dropdown => {
 
 
 // Swiper HERO-BLOCK
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-container-hero', {
+        allowTouchMove: false,
         speed: 1500,
         loop: true,
         effect: 'fade',
         autoplay: {
-            delay: 500
+            delay: 1500
         },
     });
 });
@@ -148,7 +149,7 @@ let swiperSlides = document.querySelector(".gallery").querySelectorAll(".gallery
 let modal = document.querySelector(".swiper-section-modal");
 let modalBtn = modal.querySelector(".close");
 swiperSlides.forEach(el => {
-    el.addEventListener("click", function() {
+    el.addEventListener("click", function () {
         let img = this.querySelector("img");
         let link = img.getAttribute("src");
         console.log(modal.querySelector("img"));
@@ -157,19 +158,19 @@ swiperSlides.forEach(el => {
     })
 })
 
-modalBtn.addEventListener("click", function() {
+modalBtn.addEventListener("click", function () {
     animation(modal, "modal-active", "reverse");
 });
 
 function animation(el, Class, flag) {
     if (flag === "play") {
         el.style.display = "flex";
-        setTimeout(function() {
+        setTimeout(function () {
             el.classList.add(Class);
         }, 50)
     } else if (flag === "reverse") {
         el.classList.remove(Class);
-        setTimeout(function() {
+        setTimeout(function () {
             el.style.display = "none";
         }, 700)
     }
@@ -185,29 +186,29 @@ const choices = new Choices(selector, {
 
 });
 let arr = [];
-selector.addEventListener("change", function(event) {
+selector.addEventListener("change", function (event) {
     // document.querySelectorAll(`.swiper-slide[data-tab=${event.detail.value}]`).forEach(item => {
     //   arr.push(item);
     // });
     // console.log(arr);
     document.querySelectorAll(".swiper-slide-gallery").forEach((item, index) => {
-            console.log(index)
-            gallerySlider.removeSlide(index)
-        })
-        // arr.forEach((el, index) => {
-        //   gallerySlider.addSlide(index, el)
-        // })
+        console.log(index)
+        gallerySlider.removeSlide(index)
+    })
+    // arr.forEach((el, index) => {
+    //   gallerySlider.addSlide(index, el)
+    // })
 });
 
 // ACCODION 
 
-$(function() {
+$(function () {
     $(".ac--list").accordion({
         icons: false,
         heightStyle: "content",
     });
     document.querySelectorAll(".heading-item--btn").forEach(item => {
-        item.addEventListener("click", function(e) {
+        item.addEventListener("click", function (e) {
             $(".ac--list").accordion({
                 icons: false,
                 heightStyle: "content",
@@ -231,7 +232,7 @@ $(function() {
         let btns = item.querySelectorAll(".ac--list__iten-tab");
         let articles = item.querySelectorAll(".article-content");
         btns.forEach(el => {
-            el.addEventListener("click", function(e) {
+            el.addEventListener("click", function (e) {
                 let path = e.currentTarget.dataset.path;
                 let tabCont = item.querySelector(`[data-target='${path}']`);
                 console.log(tabCont)
@@ -349,23 +350,12 @@ let projectSlider = new Swiper(".swiper_project", {
 
 // tooltips
 
-tippy('#tool-one', {
-    content: 'Пример современных тенденций - современная методология разработки',
-    theme: 'blanch'
-});
-
-tippy('#tool-two', {
-    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  ',
-    theme: 'blanch'
-});
-
-tippy('#tool-three', {
-    content: 'В стремлении повысить качество',
-    theme: 'blanch'
-});
+tippy('.tooltip', {
+    theme: 'blanchard',
+})
 
 // PROJECTS SWIPER
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper-projects', {
         speed: 500,
         loop: true,
@@ -379,3 +369,60 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 });
+
+// VALIDATE FORM 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const validation = new JustValidate('#form_footer');
+    var selector2 = document.querySelector("input[type='tel']");
+    var im = new Inputmask("+7 (999)-999-99-99");
+    im.mask(selector2);
+    validation
+        .addField('#name', [
+            {
+                rule: 'minLength',
+                value: 3,
+                errorMessage: "Недопустимый формат"
+            },
+            {
+                rule: 'maxLength',
+                value: 10,
+                errorMessage: "Недопустимый формат"
+            },
+            {
+                rule: 'required',
+                errorMessage: "Недопустимый формат"
+            },
+        ])
+
+        .addField('#phone', [
+            {
+                required: true, 
+                rule: "function",
+                validator: function (name, value) {
+                    const phone = selector.inputmask.unmaskedvalue();
+                    return phone.length === 10
+                },
+                errorMessage: 'Недопустимый формат',
+            },
+        ])
+});
+
+// YANDEX MAPS 
+
+ymaps.ready(init);
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [55.758468, 37.601088],
+        zoom: 14
+    });
+
+    var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/pin.svg',
+        iconImageSize: [20, 20],
+        iconImageOffset: [0, 0]
+    })
+
+    myMap.geoObjects.add(myPlacemark);
+};
