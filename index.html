@@ -240,9 +240,8 @@
                     </ul>
                     <div class="search">
                         <form class="search_form" autocomplete="off">
-                            <button class="btn_search2" aria-label="Кнопка начать поиск по сайту"><svg
-                                    width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                            <button class="btn_search2" aria-label="Кнопка начать поиск по сайту"><svg width="23"
+                                    height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="6.8678" height="1.71695"
                                         transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
                                         fill="white"></rect>
@@ -665,15 +664,16 @@
                     <div class="swiper swiper_event">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide_event">
-                                <figure>
-                                    <img class="event_img" src="/img/events.jpg" alt>
-                                    <figcaption>
-                                        Музей им. Щусева <br> с 20 марта по 30 апреля
-                                    </figcaption>
-                                </figure>
+                                <picture>
+                                    <source class="event_img" srcset="/img/events_1024.jpg" media="(max-width: 1650px)">
+                                    <source class="event_img" srcset="/img/events_768.jpg" media="(max-width: 1000px)">
+                                    <source class="event_img" srcset="/img/events_320.jpg" media="(max-width: 660px)">
+                                    <img class="event_img" src="/img/events.jpg" alt="">
+                                </picture>
+                                <span>Музей им. Щусева <br> с 20 марта по 30 апреля</span>
                                 <div class="event_content">
                                     <div>
-                                        <h3>Книжная гравюра в живом восприятии</h3>
+                                        <h3>Книжная гравюра <br> в живом восприятии</h3>
                                         <p>Один из ведущих флорентийских художников Кватроченто, основатель
                                             художественной династии, которую продолжили его брат Давид и сын Ридольфо
                                         </p>
@@ -682,12 +682,17 @@
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide_event">
-                                <figure>
-                                    <img class="event_img" src="/img/events-1.jpg" alt>
-                                    <figcaption>
-                                        ММОМА <br> 24 марта 19:00
-                                    </figcaption>
-                                </figure>
+                                <picture>
+                                    <source class="event_img" srcset="/img/events_1024_1.jpg"
+                                        media="(max-width: 1650px)">
+                                    <source class="event_img" srcset="/img/events_768_1.jpg"
+                                        media="(max-width: 1000px)">
+                                    <source class="event_img" srcset="/img/events_320_1.jpg" media="(max-width: 660px)">
+                                    <img class="event_img" src="/img/events-1.jpg" alt="">
+                                </picture>
+                                <span>
+                                    ММОМА <br> 24 марта 19:00
+                                </span>
                                 <div class="event_content">
                                     <div>
                                         <h3>«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
@@ -698,12 +703,17 @@
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide_event">
-                                <figure>
-                                    <img class="event_img" src="/img/events-2.jpg" alt>
-                                    <figcaption>
-                                        Еврейский музей <br> с 31 марта по 21 апреля
-                                    </figcaption>
-                                </figure>
+                                <picture>
+                                    <source class="event_img" srcset="/img/events_1024_2.jpg"
+                                        media="(max-width: 1650px)">
+                                    <source class="event_img" srcset="/img/events_768_2.jpg"
+                                        media="(max-width: 1000px)">
+                                    <source class="event_img" srcset="/img/events_320_2.jpg" media="(max-width: 660px)">
+                                    <img class="event_img" src="/img/events-2.jpg" alt="">
+                                </picture>
+                                <span>
+                                    Еврейский музей <br> с 31 марта по 21 апреля
+                                </span>
                                 <div class="event_content">
                                     <div>
                                         <h3>Выставка «Формация 2020»</h3>
@@ -715,12 +725,17 @@
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide_event">
-                                <figure>
+                                <picture>
+                                    <source class="event_img" srcset="/img/events_1024_3.jpg"
+                                        media="(max-width: 1650px)">
+                                    <source class="event_img" srcset="/img/events_768_3.jpg"
+                                        media="(max-width: 1000px)">
+                                    <source class="event_img" srcset="/img/events_320_3.jpg" media="(max-width: 660px)">
                                     <img class="event_img" src="/img/events-3.jpg" alt>
-                                    <figcaption>
-                                        ММАМ <br> с 8 апреля по 20 мая
-                                    </figcaption>
-                                </figure>
+                                </picture>
+                                <span>
+                                    ММАМ <br> с 8 апреля по 20 мая
+                                </span>
                                 <div class="event_content">
                                     <div>
                                         <h3>Джон Винзор. Фотографии из серии «Метафора»</h3>
@@ -732,12 +747,17 @@
                                 </div>
                             </div>
                             <div class="swiper-slide swiper-slide_event">
-                                <figure>
+                                <picture>
+                                    <source class="event_img" srcset="/img/events_1024_4.jpg"
+                                        media="(max-width: 1650px)">
+                                    <source class="event_img" srcset="/img/events_768_4.jpg"
+                                        media="(max-width: 1000px)">
+                                    <source class="event_img" srcset="/img/events_320_4.jpg" media="(max-width: 660px)">
                                     <img class="event_img" src="/img/events-4.jpg" alt>
-                                    <figcaption>
-                                        Третьяковка на Крымском валу <br> с 30 марта по 30 апреля
-                                    </figcaption>
-                                </figure>
+                                </picture>
+                                <span>
+                                    Третьяковка на Крымском валу <br> с 30 марта по 30 апреля
+                                </span>
                                 <div class="event_content">
                                     <div>
                                         <h3>XXIV Международная биеннале молодого искусства</h3>
@@ -749,6 +769,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination events_pagination"></div>
                 </div>
             </div>
         </section>
@@ -802,31 +823,31 @@
                     <div class="swiper swiper_project">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/freelands.png" alt>
+                                <a href="#"><img src="/img/freelands.png" alt></a>
                             </div>
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/ica.png" alt>
+                                <a href="#"><img src="/img/ica.png" alt></a>
                             </div>
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/workhouse.png" alt>
+                                <a href="#"><img src="/img/workhouse.png" alt></a>                               
                             </div>
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/1849.png" alt>
+                                <a href="#"><img src="/img/1849.png" alt></a>                                
                             </div>
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/hiscox.png" alt>
+                                <a href="#"><img src="/img/hiscox.png" alt></a>                                
                             </div>
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/camden_centre.png" alt>
+                                <a href="#"><img src="/img/camden_centre.png" alt></a>                                
                             </div>
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/stassen.png" alt>
+                                <a href="#"><img src="/img/stassen.png" alt></a>                                
                             </div>
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/wgav.png" alt>
+                                <a href="#"><img src="/img/wgav.png" alt></a>                                
                             </div>
                             <div class="swiper-slide swiper-slide_project">
-                                <img src="/img/esad.png" alt>
+                                <a href="#"><img src="/img/esad.png" alt></a>                                
                             </div>
                         </div>
                     </div>

@@ -124,9 +124,10 @@ new Swiper('.gallery__slider', {
     breakpoints: {
         1450: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
             spaceBetween: 50
         },
-        1024: {
+        1366: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 34
@@ -260,6 +261,9 @@ let eventSlider = new Swiper(".swiper_event", {
         nextEl: ".swiper-button-next_event",
         prevEl: ".swiper-button-prev_event"
     },
+    pagination: {
+        el: '.swiper-pagination',
+    },
 
     breakpoints: {
 
@@ -269,10 +273,10 @@ let eventSlider = new Swiper(".swiper_event", {
             spaceBetween: 50,
         },
 
-        1200: {
+        1024: {
             slidesPerView: 3,
-            slidesPerGroup: 1,
-            spaceBetween: 50,
+            slidesPerGroup: 2,
+            spaceBetween: 27,
         },
 
         576: {
@@ -322,15 +326,15 @@ let projectSlider = new Swiper(".swiper_project", {
         },
 
         1200: {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
             spaceBetween: 50,
         },
 
         576: {
             slidesPerView: 2,
             slidesPerGroup: 1,
-            spaceBetween: 15,
+            spaceBetween: 50,
         },
 
         320: {
@@ -354,21 +358,6 @@ tippy('.tooltip', {
     theme: 'blanchard',
 })
 
-// PROJECTS SWIPER
-document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.swiper-projects', {
-        speed: 500,
-        loop: true,
-        slidesPerView: 3,
-
-
-        spaceBetween: 50,
-        navigation: {
-            nextEl: ".swiper-button-next2",
-            prevEl: ".swiper-button-prev2"
-        },
-    });
-});
 
 // VALIDATE FORM 
 

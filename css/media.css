@@ -213,10 +213,6 @@
         margin-bottom: 48px;
     }
 
-    .container {
-        max-width: 1024px;
-    }
-
     .second_nav,
     .btn_lk {
         display: none;
@@ -225,10 +221,7 @@
     .header_nav {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
+        justify-content: space-between;
         position: absolute;
         top: 0;
         z-index: 10;
@@ -237,7 +230,6 @@
         width: 100%;
         min-height: 768px;
         background-color: rgba(0, 0, 0, 0.9);
-        
         -webkit-transition: -webkit-transform .1s ease-in;
         transition: -webkit-transform .1s ease-in;
         -o-transition: transform .1s ease-in;
@@ -246,17 +238,13 @@
         -webkit-transform: translateX(-140%);
         -ms-transform: translateX(-140%);
         transform: translateX(-140%);
+        padding: 97px 0 50px 43px;
     }
 
     .header_nav_ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
-        padding-left: 43px;
-        padding-top: 97px;
-        width: 100%;
-        height: 100%;
     }
 
     .header_nav_ul a {
@@ -275,7 +263,7 @@
     }
 
     .logo {
-       margin-right: 28px;
+        margin-right: 28px;
     }
 
     .logo img {
@@ -382,9 +370,13 @@
         box-sizing: border-box;
         border-radius: 100px;
         padding: 17.5px 91px 17.5px 84px;
-        position: relative;
-        bottom: 6.5%;
-        left: 4.9%;
+        font-family: 'Open_Sans', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        max-width: 257px;
+        width: 100%;
+        margin-left: 6px;
+        color: var(--white);
     }
 
     .btn_lk_mobile a {
@@ -427,12 +419,21 @@
         background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_5_1024.jpg);
     }
 
+    .about .container {
+        padding-left: 50px;
+    }
+
     .about_container p {
         max-width: 100%;
     }
 
     .gallery {
         max-height: 560px;
+    }
+
+    .gallery__container {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .gallery__item {
@@ -464,6 +465,15 @@
         max-width: 280px;
     }
 
+    .catalog {
+        margin-bottom: 81px;
+    }
+
+    .catalog .container {
+        padding-left: 48px;
+        padding-right: 46px;
+    }
+
     .catalog_p {
         min-width: 100%;
     }
@@ -471,10 +481,14 @@
     .ac--list__iten-drawers {
         display: flex;
         flex-direction: column;
-        align-content: space-between;
         max-height: 445px;
-        padding-bottom: 27px;
-        margin-right: 0;
+        padding-bottom: 26px;
+        padding-top: 27px;
+        margin-right: -64px;
+    }
+
+    .ac-list__item-btn {
+        padding-top: 10px;
     }
 
     .article-content__img {
@@ -519,6 +533,141 @@
 
     .empty_txt h3 {
         padding-top: 11px;
+    }
+
+    .swiper-slide_event {
+        height: 683px;
+    }
+
+    .swiper-slide_event span {
+        text-align: end;
+        padding: 5px 32px 0 0;
+    }
+
+    .swiper-section_event .container {
+        padding-left: 49px;
+    }
+
+    .event_img {
+        height: 200px;
+    }
+
+    .event_content {
+        padding: 4px 33px 49px 34px;
+        max-height: 436px;
+    }
+
+    .event_content h3 {
+        margin-bottom: 7px;
+        max-width: 100%;
+    }
+
+    .event_content p {
+        width: 100%;
+    }
+
+    .events_link {
+        bottom: 49px;
+    }
+
+    .swiper-pagination-bullet {
+        display: inline-block;
+        bottom: -51px;
+        left: -4px;
+    }
+
+    .events_pagination {
+        display: inline-block;
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 100%;
+        position: initial;
+        padding-top: 20px;
+    }
+
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: var(--grey);
+    }
+
+    .swiper-button-prev_event,
+    .swiper-button-next_event {
+        display: none;
+    }
+
+    .swiper-section_event .container {
+        margin-bottom: 69px;
+    }
+
+    /* PROJECTS 1336 */
+
+    .swiper_project {
+        padding-left: 13px;
+    }
+
+    .swiper-section_project .container {
+        padding-left: 50px;
+    }
+
+    .swiper-section_project p {
+        max-width: 100%;
+    }
+
+   .swiper-slide_project {
+        max-width: 384px;
+        max-height: 128px;
+    }
+
+.footer_container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 43px 30px 33px 50px;
+}
+.address {
+    margin-bottom: 22px;
+}
+.address h3 {
+    margin-bottom: 5px;
+}
+
+.address address {
+    font-size: 14px;
+}
+
+.footer_btn__submit {
+    min-width: 343px;
+}
+
+.form_footer {
+    margin-bottom: 25px;
+}
+
+.footer_bottom {
+        padding-top: 40px;
+            padding-bottom: 30px;
+}
+
+.footer_bottom_container {
+    padding-left: 30px;
+    padding-right: 71px;
+}
+
+.footer_social2_li svg {
+    width: 60px;
+    height: 60px;
+}
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 1024px;
     }
 }
 
