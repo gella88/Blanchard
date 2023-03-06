@@ -705,7 +705,8 @@ p {
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    width: 400px;
+    max-width: 400px;
+    margin-right: 50px;
 }
 
 .gallery__title {
@@ -717,7 +718,7 @@ p {
 .gallery__filter {
     display: flex;
     height: 100%;
-    /* width: 400px; */
+
     flex-direction: column;
     justify-content: space-between;
 }
@@ -936,7 +937,7 @@ p {
 }
 
 .choices {
-    padding-top: 9px;
+    padding-top: 10px;
 }
 
 .choices.is-open {
@@ -969,12 +970,20 @@ p {
 
 #choices--select-item-choice-2,
 #choices--select-item-choice-3 {
-    height: 40PX;
+    height: 40px;
     background-color: var(--black);
     color: var(--light-grey);
     font-family: 'Open_Sans', sans-serif;
     font-size: 16px;
     padding: 3px 0 0 16px;
+}
+
+#choices--select-item-choice-2:hover,
+#choices--select-item-choice-3:hover,
+#choices--select-item-choice-2:focus,
+#choices--select-item-choice-3:focus {
+background: rgba(255, 255, 255, 0.2);
+color: var(--white);
 }
 
 .checkbox {
@@ -1285,7 +1294,6 @@ p {
 
 .event_img {
     width: 100%;
-
 }
 
 .event_content {
@@ -1465,7 +1473,6 @@ p {
     color: var(--hard-purple);
 }
 
-
 .swiper-container_project {
     position: relative;
     z-index: 100;
@@ -1497,17 +1504,18 @@ p {
 .swiper-slide_project {
     background: #FFFFFF;
     border: 1px solid var(--super-light-grey);
-    height: 150px;
     width: 450px;
+  height: 150px;
+        padding: 37px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     cursor: url(/img/cursor_black.png), auto;
 }
 
 .swiper-slide_project img {
-    max-width: 244px;
-        filter: grayscale(100%) opacity(30%);
+    filter: grayscale(100%) opacity(30%);
     transition: filter 0.8s ease;
 }
 
@@ -1678,13 +1686,14 @@ footer {
     filter: grayscale(1);
 }
 
-.ymaps-2-1-79-controls__toolbar_right,
+/* .ymaps-2-1-79-controls__toolbar_right,
 .ymaps-2-1-79-controls__toolbar_left,
 .ymaps-2-1-79-scaleline,
 .ymaps-2-1-79-float-button,
-.ymaps-2-1-79-copyright__content {
+.ymaps-2-1-79-copyright__content,
+.ymaps-2-1-79-map-copyrights-promo {
     display: none;
-}
+} */
 
 .footer_bottom {
     background-color: var(--black);

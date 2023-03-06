@@ -122,12 +122,12 @@ new Swiper('.gallery__slider', {
     },
 
     breakpoints: {
-        1450: {
+        1200: {
             slidesPerView: 3,
             slidesPerGroup: 3,
-            spaceBetween: 50
+            spaceBetween: 45
         },
-        1366: {
+        1024: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 34
@@ -267,7 +267,7 @@ let eventSlider = new Swiper(".swiper_event", {
 
     breakpoints: {
 
-        1450: {
+        1300: {
             slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 50,
@@ -290,13 +290,6 @@ let eventSlider = new Swiper(".swiper_event", {
             slidesPerGroup: 1,
             spaceBetween: 0,
         },
-
-        // 1200: {
-        //     slidesPerView: 3,
-        //     slidesPerGroup: 1,
-        //     spaceBetween: 30,
-        // }
-
     },
 
     a11y: {
@@ -319,13 +312,13 @@ let projectSlider = new Swiper(".swiper_project", {
 
     breakpoints: {
 
-        1450: {
+        1065: {
             slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 50,
         },
 
-        1200: {
+        1024: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 50,
@@ -386,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         .addField('#phone', [
             {
-                required: true, 
+                required: true,
                 rule: "function",
                 validator: function (name, value) {
                     const phone = selector.inputmask.unmaskedvalue();
@@ -403,15 +396,34 @@ ymaps.ready(init);
 function init() {
     var myMap = new ymaps.Map("map", {
         center: [55.758468, 37.601088],
-        zoom: 14
+        zoom: 14,
+        controls: [],
+        behaviors: ['drag']
     });
+    myMap.controls.add('zoomControl', {
+        position: {
+            right: '18px',
+            top: '5px'
+        }
+    });
+
+    myMap.controls.add('geolocationControl', {
+        position: {
+            right: '18px',
+            top: '310px'
+        }
+    });
+
+    var controlState = myMap.controls.get('geolocationControl').state.get('size', 'small');
 
     var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
         iconLayout: 'default#image',
         iconImageHref: 'img/pin.svg',
         iconImageSize: [20, 20],
         iconImageOffset: [0, 0]
-    })
+    });
 
+    // myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
+
 };
