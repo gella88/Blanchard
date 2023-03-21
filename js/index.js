@@ -113,35 +113,32 @@ new Swiper('.gallery__slider', {
         type: 'fraction',
     },
 
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 50,
     navigation: {
         nextEl: '.gallery__btn--next',
         prevEl: '.gallery__btn--prev',
     },
 
     breakpoints: {
-        1200: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 45
-        },
-        1024: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 34
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
         },
         768: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 38
         },
-        320: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
+        1024: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 34
+        },
+        1336: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 50
         }
-    },
+    }
 
 });
 
@@ -401,9 +398,10 @@ function init() {
         behaviors: ['drag']
     });
     myMap.controls.add('zoomControl', {
+        size: 'medium',
         position: {
             right: '18px',
-            top: '5px'
+            top: '240px'
         }
     });
 
@@ -423,7 +421,6 @@ function init() {
         iconImageOffset: [0, 0]
     });
 
-    // myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
 
 };

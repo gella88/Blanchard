@@ -733,7 +733,7 @@ p {
 
 .gallery__item {
     position: relative;
-    width: 350px;
+    max-width: 350px;
     height: 350px;
     cursor: url(/img/cursor.png), auto;
     transition: .3s opacity, 0s border-color;
@@ -1685,15 +1685,6 @@ footer {
 [class*="ground-pane"] {
     filter: grayscale(1);
 }
-
-/* .ymaps-2-1-79-controls__toolbar_right,
-.ymaps-2-1-79-controls__toolbar_left,
-.ymaps-2-1-79-scaleline,
-.ymaps-2-1-79-float-button,
-.ymaps-2-1-79-copyright__content,
-.ymaps-2-1-79-map-copyrights-promo {
-    display: none;
-} */
 
 .footer_bottom {
     background-color: var(--black);
