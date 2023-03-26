@@ -105,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // Галерея + чекбокс
 
 new Swiper('.gallery__slider', {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 50,
     speed: 1000,
     preloadImages: true,
     allowTouchMove: false,
@@ -133,11 +136,11 @@ new Swiper('.gallery__slider', {
             slidesPerGroup: 2,
             spaceBetween: 34
         },
-        1336: {
+
+        1600: {
             slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 50
-        }
+            spaceBetween: 50,
+        },
     }
 
 });
@@ -278,8 +281,8 @@ let eventSlider = new Swiper(".swiper_event", {
 
         576: {
             slidesPerView: 2,
-            slidesPerGroup: 1,
-            spaceBetween: 15,
+            slidesPerGroup: 2,
+            spaceBetween: 34,
         },
 
         320: {
@@ -309,29 +312,30 @@ let projectSlider = new Swiper(".swiper_project", {
 
     breakpoints: {
 
-        1065: {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            spaceBetween: 50,
-        },
-
-        1024: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 50,
-        },
-
-        576: {
-            slidesPerView: 2,
-            slidesPerGroup: 1,
-            spaceBetween: 50,
-        },
-
         320: {
             slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: 0,
         },
+
+        576: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 33.97,
+        },
+
+        1024: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+        },
+
+        1600: {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+        },
+
 
     },
 

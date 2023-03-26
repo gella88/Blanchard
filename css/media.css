@@ -228,7 +228,7 @@
         margin: 0;
         left: 0;
         width: 100%;
-        min-height: 768px;
+        min-height: 800px;
         background-color: rgba(0, 0, 0, 0.9);
         -webkit-transition: -webkit-transform .1s ease-in;
         transition: -webkit-transform .1s ease-in;
@@ -531,7 +531,7 @@
         padding: 5px 32px 0 0;
     }
 
-    .swiper-section_event .container {
+    .event .container {
         padding-left: 49px;
     }
 
@@ -588,27 +588,35 @@
         display: none;
     }
 
-    .swiper-section_event .container {
+    .event .container {
         margin-bottom: 69px;
     }
 
     /* PROJECTS 1336 */
 
-    .swiper_project {
-        padding-left: 13px;
+    .project {
+        margin-bottom: 80px;
     }
 
-    .swiper-section_project .container {
+    .project .container {
         padding-left: 50px;
     }
 
-    .swiper-section_project p {
+    .project p {
         max-width: 100%;
     }
 
+    .swiper-container_project {
+        margin: 0 auto;
+        max-width: 818px;
+    }
+
     .swiper-slide_project {
-        max-width: 384px;
         max-height: 128px;
+    }
+
+    .swiper-slide_project img {
+        max-width: 85%;
     }
 
     .footer_container {
@@ -659,13 +667,20 @@
         max-width: 1024px;
     }
 
+    .swiper-button-prev_project {
+        left: -6.7%;
+    }
+
+    .swiper-button-next_project {
+        right: -6.6%;
+    }
+
     .events_link {
         bottom: 49px;
     }
 }
 
 @media (max-width: 1000px) {
-
     .gallery {
         min-height: 889px;
         margin-bottom: 80px;
@@ -798,263 +813,333 @@
         padding-top: 0px;
         min-width: 668px;
     }
-}
 
-@media (max-width: 660px) {
-    .header {
-        height: 355px;
-        margin-bottom: 37px;
+    .event_img {
+        max-height: 200px;
     }
 
-    .header_top {
-        max-height: 45px;
+    .event h2 {
+        margin-bottom: 13px;
     }
 
-    .logo {
-        padding-top: 11px;
-        padding-right: 14px;
+    .swiper-slide_event span {
+        padding: 5px 15px 0 0;
     }
 
-    .logo img {
-        width: 97px;
+    .event_content h3 {
+        margin-bottom: 5px;
     }
 
-    .burger {
-        width: 25px;
-        height: 18px;
+    .events_link {
+        bottom: 48px;
     }
 
-    .burger .burger-line {
-        height: 2px;
+    .project p {
+        padding-right: 6px;
+        margin-bottom: 28px;
     }
 
-    .burger .burger-line:nth-child(2) {
-        width: 65%;
+    .projects_link::before {
+        content: 'blanchard-art.ru';
     }
 
-    .burger .burger-line:nth-child(3) {
-        width: 41%;
+    .swiper-container_project {
+        max-width: 561.58px;
     }
 
-    .header_search svg {
-        width: 18px;
-        height: 27.5px;
+    .swiper-slide_project {
+        max-height: 106px;
     }
 
-    .btn_search {
-        transition: all 0.5ms ease-in-out;
-        opacity: 1;
-        right: 4.7%;
-        top: 17%;
+    .project h3 {
+        margin-bottom: 29px;
     }
 
-    .hero .container {
-        padding-top: 54px;
+    .swiper-button-prev_project {
+        left: -9.7%;
+        top: 55.3%;
     }
 
-    .hero_content p {
-        margin: 0;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: 0px;
-        margin-bottom: 41px;
+        .swiper-button-next_project {
+            right: -9.6%;
+            top: 55.5%;
+        }
+
+        .footer_form__input
+         {
+            width: 323px;
+        }
+
+        .footer_btn__submit {
+            min-width: 317px;
+        }
+
+        .form__fields:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        .form_footer {
+            flex-wrap: wrap;
+            width: 100%;
+        }
     }
 
-    .hero_text h1 {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 44px;
-        margin-bottom: 2px;
+    @media (max-width: 660px) {
+        .header {
+            height: 355px;
+            margin-bottom: 37px;
+        }
+
+        .header_top {
+            max-height: 45px;
+        }
+
+        .logo {
+            padding-top: 11px;
+            padding-right: 14px;
+                margin: 0;
+        }
+
+        .logo img {
+            width: 97px;
+        }
+
+        .burger {
+            width: 25px;
+            height: 18px;
+        }
+
+        .burger .burger-line {
+            height: 2px;
+        }
+
+        .burger .burger-line:nth-child(2) {
+            width: 65%;
+        }
+
+        .burger .burger-line:nth-child(3) {
+            width: 41%;
+        }
+
+        .header_search svg {
+            width: 18px;
+            height: 27.5px;
+        }
+
+        .btn_search {
+            transition: all 0.5ms ease-in-out;
+            opacity: 1;
+            right: 4.7%;
+            top: 17%;
+        }
+
+        .hero .container {
+            padding-top: 54px;
+        }
+
+        .hero_content p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0px;
+            margin-bottom: 41px;
+        }
+
+        .hero_text h1 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 2px;
+        }
+
+        .hero_content {
+            height: 355px;
+            padding-bottom: 45px;
+        }
+
+        .btn_mailing {
+            font-size: 12px;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            padding: 11px 12px 14px 19px;
+        }
+
+        /* ABOUT US */
+        .about {
+            margin-bottom: 41px;
+        }
+
+        .about_container h2 {
+            font-size: 28px;
+            margin-bottom: -2px;
+        }
+
+        .about_container p {
+            font-size: 14px;
+            line-height: 28px;
+            max-width: 100%;
+        }
+
+        .about .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .gallery__title {
+            font-size: 28px;
+            letter-spacing: 0px;
+            margin-bottom: -4px;
+        }
+
+        .gallery {
+            padding: 38px 0px;
+            margin-bottom: 37px;
+        }
+
+        .choices {
+            padding-top: 6px;
+        }
+
+        .choices__inner {
+            min-width: 290px;
+        }
+
+        .choices[data-type*=select-one]:after {
+            right: 6.7%;
+        }
+
+        .gallery__filter {
+            height: 205px;
+            margin-bottom: 14px;
+        }
+
+        .gallery__slider {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .choices__list {
+            max-width: 290px;
+        }
+
+        .catalog h2 {
+            margin-bottom: -2px;
+            font-size: 28px;
+        }
+
+        .catalog_p {
+            display: none;
+        }
+
+        .ac--list__item-top h3 {
+            font-size: 18px;
+        }
+
+        .ac--list__item-top {
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .ac--list__iten-drawers {
+            max-height: 100%;
+            padding-bottom: 23px;
+            padding-top: 22px;
+        }
+
+        .article-content__img {
+            width: 290px;
+        }
+
+        .empty {
+            min-width: 0%;
+            max-width: 79px;
+            height: 118px;
+            outline-offset: 3px;
+            margin-left: 3px;
+            margin-right: 30px;
+        }
+
+        .empty_txt h3 {
+            font-size: 18px;
+        }
+
+        .empty_txt p {
+            width: 100%;
+        }
+
+        .ac--list__iten-bottom_empty {
+            padding-top: 49px;
+            padding-bottom: 49px;
+        }
     }
 
-    .hero_content {
-        height: 355px;
-        padding-bottom: 45px;
-    }
+    @media (max-width: 320px) {
+        .container {
+            max-width: 320px;
+            padding-left: 15px;
+            padding-right: 16px;
+        }
 
-    .btn_mailing {
-        font-size: 12px;
-        width: 200px;
-        height: 40px;
-        text-align: center;
-        padding: 11px 0px 14px 19px;
-    }
+        .hero_text {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 2px;
+        }
 
-    /* ABOUT US */
-    .about {
-        margin-bottom: 41px;
-    }
+        .hero_content p {
+            max-width: 86%;
+            text-align: center;
+        }
 
-    .about_container h2 {
-        font-size: 28px;
-        margin-bottom: -2px;
-    }
+        .swiper-slide-1 {
+            background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2_320jpg);
+        }
 
-    .about_container p {
-        font-size: 14px;
-        line-height: 28px;
-        max-width: 100%;
-    }
+        .swiper-slide-2 {
+            background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_4_320.jpg);
+        }
 
-    .about .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+        .swiper-slide-3 {
+            background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_5_320.jpg);
+        }
 
-    .gallery__title {
-        font-size: 28px;
-        letter-spacing: 0px;
-        margin-bottom: -4px;
-    }
+        .gallery__item {
+            width: 290px;
+            height: 367px;
+        }
 
-    .gallery {
-        padding: 38px 0px;
-        margin-bottom: 37px;
-    }
+        .gallery__list {
+            margin-bottom: -6px;
+        }
 
-    .choices {
-        padding-top: 6px;
-    }
+        .gallery {
+            min-height: 800px;
+        }
 
-    .choices__inner {
-        min-width: 290px;
-    }
+        .ac-list__item-btn {
+            width: 10%;
+            height: 29px;
+        }
 
-    .choices[data-type*=select-one]:after {
-        right: 6.7%;
-    }
+        .ac-list__item-btn svg {
+            max-width: 9px;
+        }
 
-    .gallery__filter {
-        height: 205px;
-        margin-bottom: 14px;
-    }
+        .article-content.article-tabActive {
+            margin-top: -6px;
+        }
 
-    .gallery__slider {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
+        .article-content {
+            max-width: 100%;
+        }
 
-    .choices__list {
-        max-width: 290px;
+        .article-content p {
+            padding-top: 4px;
+            min-width: 290px;
+            max-width: 100%;
+        }
     }
-
-    .catalog h2 {
-        margin-bottom: -2px;
-        font-size: 28px;
-    }
-
-    .catalog_p {
-        display: none;
-    }
-
-    .ac--list__item-top h3 {
-        font-size: 18px;
-    }
-
-    .ac--list__item-top {
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
-
-    .ac--list__iten-drawers {
-        max-height: 100%;
-        padding-bottom: 23px;
-        padding-top: 22px;
-    }
-
-    .article-content__img {
-        width: 290px;
-    }
-
-    .empty {
-        min-width: 0%;
-        max-width: 79px;
-        height: 118px;
-        outline-offset: 3px;
-        margin-left: 3px;
-        margin-right: 30px;
-    }
-
-    .empty_txt h3 {
-        font-size: 18px;
-    }
-
-    .empty_txt p {
-        width: 100%;
-    }
-
-    .ac--list__iten-bottom_empty {
-        padding-top: 49px;
-        padding-bottom: 49px;
-    }
-}
-
-@media (max-width: 320px) {
-    .container {
-        max-width: 320px;
-        padding-left: 15px;
-        padding-right: 16px;
-    }
-
-    .hero_text {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero_content p {
-        max-width: 86%;
-        text-align: center;
-    }
-
-    .swiper-slide-1 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2_320jpg);
-    }
-
-    .swiper-slide-2 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_4_320.jpg);
-    }
-
-    .swiper-slide-3 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_5_320.jpg);
-    }
-
-    .gallery__item {
-        width: 290px;
-        height: 367px;
-    }
-
-    .gallery__list {
-        margin-bottom: -6px;
-    }
-
-    .gallery {
-        min-height: 800px;
-    }
-
-    .ac-list__item-btn {
-        width: 10%;
-        height: 29px;
-    }
-
-    .ac-list__item-btn svg {
-        max-width: 9px;
-    }
-
-    .article-content.article-tabActive {
-        margin-top: -6px;
-    }
-
-    .article-content {
-        max-width: 100%;
-    }
-
-    .article-content p {
-        padding-top: 4px;
-        min-width: 290px;
-        max-width: 100%;
-    }
-}

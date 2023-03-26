@@ -116,7 +116,8 @@ p {
     position: relative;
     z-index: 1;
     margin-bottom: 80px;
-    min-height: 800px;
+    height: 800px;
+    max-height: 100%;
 }
 
 .header_nav_ul {
@@ -595,7 +596,7 @@ p {
     margin-bottom: 70px;
 }
 
-.about .container {
+.about_container {
     padding-left: 45px;
 }
 
@@ -705,7 +706,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    max-width: 400px;
+    min-width: 400px;
     margin-right: 50px;
 }
 
@@ -733,7 +734,7 @@ p {
 
 .gallery__item {
     position: relative;
-    max-width: 350px;
+    /* max-width: 350px; */
     height: 350px;
     cursor: url(/img/cursor.png), auto;
     transition: .3s opacity, 0s border-color;
@@ -982,8 +983,8 @@ p {
 #choices--select-item-choice-3:hover,
 #choices--select-item-choice-2:focus,
 #choices--select-item-choice-3:focus {
-background: rgba(255, 255, 255, 0.2);
-color: var(--white);
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
 }
 
 .checkbox {
@@ -1109,8 +1110,7 @@ color: var(--white);
 .ac-list__item-btn {
     cursor: url(/img/cursor_black.png), auto;
     border-radius: 100%;
-    max-width: 50px;
-    width: 100%;
+    width: 50px;
     height: 50px;
     background-color: transparent;
     transition-property: transform;
@@ -1261,13 +1261,13 @@ color: var(--white);
 
 /* EVENTS SWIPER */
 
-.swiper-section_event .container {
+.event .container {
     max-width: 1690px;
     padding-left: 39px;
     margin-bottom: 80px;
 }
 
-.swiper-section_event h2 {
+.event h2 {
     margin-bottom: 15px;
 }
 
@@ -1450,6 +1450,10 @@ color: var(--white);
     padding: 2px 5px;
 }
 
+.projects_link::before {
+    content: 'blanchard-art.ru/projects';
+}
+
 .projects_link:hover::after {
     content: '';
     position: absolute;
@@ -1476,27 +1480,27 @@ color: var(--white);
 .swiper-container_project {
     position: relative;
     z-index: 100;
-    margin: 0 auto;
-    width: 91.3%;
+    margin: 0 75px 0 75px;
+    max-width: 1450px;
     margin-bottom: 80px;
 }
 
-.swiper-section_project .container {
+.project .container {
     padding-left: 45px;
 }
 
-.swiper-section_project h2 {
+.project h2 {
     margin-bottom: 16px;
 }
 
-.swiper-section_project p {
+.project p {
     color: var(--hard-grey);
     max-width: 65.8%;
     letter-spacing: -1.12px;
     margin-bottom: 20px;
 }
 
-.swiper-section_project h3 {
+.project h3 {
     letter-spacing: 0.5px;
     margin-bottom: 23px;
 }
@@ -1504,14 +1508,18 @@ color: var(--white);
 .swiper-slide_project {
     background: #FFFFFF;
     border: 1px solid var(--super-light-grey);
-    width: 450px;
-  height: 150px;
-        padding: 37px 0;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-shrink: 0;
     cursor: url(/img/cursor_black.png), auto;
+}
+
+.swiper-slide_project a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .swiper-slide_project img {
@@ -1550,12 +1558,12 @@ color: var(--white);
 
 .swiper-button-prev_project {
     top: 54.5%;
-    left: -5%;
+    left: -5.4%;
 }
 
 .swiper-button-next_project {
     top: 55%;
-    right: -4.5%;
+    right: -5.1%;
 }
 
 /* FOOTER */
@@ -1606,6 +1614,7 @@ footer {
 
 .form_footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 56.5%;
     margin-right: 10px;
