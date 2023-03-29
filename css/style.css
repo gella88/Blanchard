@@ -105,10 +105,7 @@ p {
     outline: none;
 }
 
-
 /* header */
-
-
 /* first-header */
 
 .header {
@@ -130,7 +127,6 @@ p {
     margin-right: 55px;
 }
 
-
 .header_nav_ul_li {
     font-family: "Open_Sans", sans-serif;
     font-weight: 600;
@@ -139,7 +135,7 @@ p {
     color: var(--white);
 }
 
-.header_nav_ul_li a {
+.header_nav_ul_link {
     white-space: nowrap;
 }
 
@@ -148,7 +144,7 @@ p {
     align-items: center;
 }
 
-.burger .burger-line {
+.burger-line {
     width: 100%;
     height: 3.65px;
     background-color: var(--white);
@@ -156,11 +152,11 @@ p {
     left: 0px;
 }
 
-.burger .burger-line:nth-child(2) {
+.burger-line:nth-child(2) {
     width: 78.35%;
 }
 
-.burger .burger-line:nth-child(3) {
+.burger-line:nth-child(3) {
     width: 66.67%;
 }
 
@@ -202,7 +198,7 @@ p {
     display: none;
 }
 
-.btn_lk svg {
+.btn_lk_svg {
     margin-right: 3px;
 }
 
@@ -223,7 +219,6 @@ p {
     right: 5%;
     top: 40%;
 }
-
 
 /* ВТОРОЕ МЕНЮ */
 
@@ -262,7 +257,7 @@ p {
     transition: .3s ease-in-out;
 }
 
-.list--item__btn svg {
+.list--item__btn_svg {
     margin-left: 2px;
     margin-top: 5px;
     transition: .3s ease-in-out;
@@ -272,18 +267,6 @@ p {
     font-family: 'Open_Sans', sans-serif;
     font-size: 18px;
     transition: .1s ease-in-out;
-}
-
-.active--btn.list--item__btn:active {
-    color: var(--hard-purple);
-}
-
-.list--item__btn:hover:not(:focus-visible) .list--item__btn svg path {
-    stroke: var(--purple);
-}
-
-.list--item__btn:active:not(:focus) .list--item__btn svg path {
-    stroke: var(--hard-purple);
 }
 
 .active--btn.list--item__btn path {
@@ -353,14 +336,14 @@ p {
     height: 220px;
 }
 
-.dropdown__simplebar .simplebar-track.simplebar-vertical {
+.simplebar-track.simplebar-vertical {
     background-color: var(--black);
     width: 2px;
     position: absolute;
     right: -20px;
 }
 
-.dropdown__simplebar .simplebar-scrollbar {
+.simplebar-scrollbar {
     width: 2px;
     background-color: var(--white);
 }
@@ -490,7 +473,7 @@ p {
     z-index: -1;
 }
 
-.hero .container {
+.hero_container {
     padding-top: 186px;
 }
 
@@ -640,11 +623,14 @@ p {
 }
 
 .swiper-section-modal__content {
-    max-width: 800px;
+    max-width: 594px;
+    max-height: 594px;
     display: flex;
     background-color: var(--white);
     color: var(--black);
     min-height: 400px;
+    height: 100%;
+    width: 100%;
 }
 
 .swiper-section-modal__content-left {
@@ -779,17 +765,6 @@ p {
     transition: .3s ease-in-out;
 }
 
-.gallery__item:hover:before {
-    z-index: 1;
-    opacity: 1;
-}
-
-.gallery__item:active::before,
-.gallery__item:focus::before,
-.gallery__item:active::after {
-    opacity: 1
-}
-
 .gallery__item.swiper-slide {
     margin-right: 30px;
 }
@@ -844,37 +819,6 @@ p {
     top: 7px;
     font-family: swiper-icons;
     font-size: 10px;
-}
-
-.slider-nav__btn-next:hover,
-.slider-nav__btn-prev:hover {
-    border-color: var(--color-pink);
-    background-color: var(--color-pink)
-}
-
-.slider-nav__btn-next:focus,
-.slider-nav__btn-prev:focus {
-    outline: 0
-}
-
-.slider-nav__btn-next:focus-visible,
-.slider-nav__btn-prev:focus-visible {
-    border: 2px solid var(--black);
-}
-
-.slider-nav__btn-next:active,
-.slider-nav__btn-prev:active {
-    background-color: var(--color-hard-pink);
-    border: 2px solid var(--black);
-}
-
-.slider-nav__btn-next.swiper-button-disabled,
-.slider-nav__btn-next:disabled,
-.slider-nav__btn-prev.swiper-button-disabled,
-.slider-nav__btn-prev:disabled {
-    opacity: .8;
-    pointer-events: none;
-    border: 2px solid var(--black);
 }
 
 .slider-nav__btn-prev::after {
@@ -979,14 +923,6 @@ p {
     padding: 3px 0 0 16px;
 }
 
-#choices--select-item-choice-2:hover,
-#choices--select-item-choice-3:hover,
-#choices--select-item-choice-2:focus,
-#choices--select-item-choice-3:focus {
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--white);
-}
-
 .checkbox {
     display: flex;
 }
@@ -1044,10 +980,7 @@ p {
     color: var(--light-purple);
 }
 
-.checkbox__label:hover span,
-.checkbox_input:focus+.label_custom_check {
-    border-color: var(--light-purple);
-}
+
 
 .checkbox_input:focus+.checkbox_check+.descrip_check {
     color: var(--light-purple);
@@ -1057,8 +990,7 @@ p {
     padding-left: 23px;
 }
 
-
-/* CATALOGUE */
+/* CATALOG */
 
 .catalog {
     margin-bottom: 80px;
@@ -1337,10 +1269,10 @@ p {
     content: '';
     position: absolute;
     height: 1px;
-    width: 100%;
+    width: 90%;
     background-color: var(--purple);
-    bottom: 2px;
-    left: 0;
+    bottom: 6px;
+    left: 5px;
 }
 
 .swiper-button-prev_event,
@@ -1433,16 +1365,6 @@ p {
     border-right-color: var(--purple);
 }
 
-.tooltip:hover path,
-.tooltip:focus path {
-    fill: var(--white);
-}
-
-.tooltip:hover,
-.tooltip:focus {
-    background-color: var(--purple);
-}
-
 .projects_link {
     position: relative;
     cursor: url(/img/cursor_black.png), auto;
@@ -1454,15 +1376,7 @@ p {
     content: 'blanchard-art.ru/projects';
 }
 
-.projects_link:hover::after {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 95%;
-    background-color: var(--purple);
-    bottom: 2px;
-    right: 2%;
-}
+
 
 .projects_link:active::after {
     background-color: var(--hard-purple);
@@ -1636,6 +1550,7 @@ footer {
 
 
 .footer_btn__submit {
+    cursor: url(/img/cursor_black.png), auto;
     font-family: 'Open_Sans_bold', sans-serif;
     font-size: 18px;
     line-height: 25px;
@@ -1671,8 +1586,31 @@ footer {
     display: flex;
 }
 
+.footer_social1__ul_li {
+    cursor: url(/img/cursor_black.png), auto;
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    transition: opacity .3s ease-in-out;
+}
+
 .footer_social1__ul_li:not(:last-child) {
     margin-right: 20px;
+}
+
+.footer_social1__ul_li_ref::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--purple);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
 }
 
 .ya_maps {
