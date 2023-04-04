@@ -21,24 +21,24 @@
         <!-- НАВИГАЦИЯ -->
         <div class="header_top">
             <div class="container header_container">
-                <div id="burger" class="burger">
+                <button id="burger" class="burger" aria-label="Кнопка открытия навигационного меню">
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
-                </div>
+                </button>
                 <a href="/index.html" class="logo">
-                    <img src="/img/Лого.svg" alt="логотип Blanchard">
+                    <img src="/img/Лого.svg" alt="логотип художественной галереи Blanchard">
                 </a>
                 <nav id="header_nav" class="header_nav">
                     <ul class="header_nav_ul">
-                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#about">О&nbsp;нас</a></li>
-                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#gallery">Галерея</a></li>
-                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#catalog">Каталог</a></li>
-                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#events">События</a></li>
-                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#projects">Проекты</a></li>
-                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#contacts">Контакты</a></li>
+                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#about" aria-label="перейти на страницу о нас">О&nbsp;нас</a></li>
+                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#gallery" aria-label="перейти на страницу галерея">Галерея</a></li>
+                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#catalog" aria-label="перейти на страницу каталог">Каталог</a></li>
+                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#events" aria-label="перейти на страницу события">События</a></li>
+                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#projects" aria-label="перейти на страницу проекты">Проекты</a></li>
+                        <li class="header_nav_ul_li"><a class="header_nav_ul_link" href="#contacts" aria-label="перейти на страницу контакты">Контакты</a></li>
                     </ul>
-                    <button class="burger_active">
+                    <button class="burger_active" aria-label="Кнопка закрытия навигационного меню">
                         <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)"
                                 fill="white"></rect>
@@ -46,15 +46,18 @@
                                 fill="white"></rect>
                         </svg>
                     </button>
-                    <button class="btn_lk_mobile"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                    <button class="btn_lk_mobile">
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
                                 fill="white"></path>
                         </svg>
-                        Войти</button>
+                        Войти
+                    </button>
                 </nav>
-                <button class="btn_lk"><svg class="btn_lk_svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                <button class="btn_lk">
+                    <svg class="btn_lk_svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
@@ -316,11 +319,11 @@
             </div>
             <div class="container gallery__container">
                 <div class="gallery__header">
-                    <h2 class="gallery__title section-title">Галерея</h2>
+                    <h2 class="gallery__title section-title" tabindex="0">Галерея</h2>
                     <!-- Filter -->
                     <div class="filter gallery__filter" role="listbox">
                         <div>
-                            <span class="filter__desc">Фильтр:</span>
+                            <span class="filter__desc" tabindex="0">Фильтр:</span>
                             <select id="select" class="select" name="select">
                                 <option value="selected">Живопись</option>
                                 <option value="ris">Рисунок</option>
@@ -432,9 +435,9 @@
                     </article>
                     <article class="article-content article-tabActive" data-target="d.girlandayo">
                         <img class="article-content__img" src="/img/D.Girlandao.jpg" alt="Гирландайо">
-                        <h4>Доменико Гирландайо</h4>
-                        <span>2 июня 1448–11 января 1494</span>
-                        <p>Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                        <h4 tabindex="1">Доменико Гирландайо</h4>
+                        <span tabindex="1">2 июня 1448–11 января 1494</span>
+                        <p tabindex="1">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
                             которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
                             Микеланджело в течение года овладевал профессиональными
                             навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана
@@ -443,9 +446,9 @@
                     </article>
                     <article class="article-content" data-target="b.dibindo">
                         <img class="article-content__img" src="/img/b.dibindo.jpg" alt="Ди Биндо">
-                        <h4>Бенедетто ди Биндо</h4>
-                        <span>1380 – 1417</span>
-                        <p>Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго
+                        <h4 tabindex="1">Бенедетто ди Биндо</h4>
+                        <span tabindex="1">1380 – 1417</span>
+                        <p tabindex="1">Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго
                             ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов,
                             включая работы в Сиенском соборе (работы в
                             главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у
@@ -456,9 +459,9 @@
                     </article>
                     <article class="article-content" data-target="ambojo">
                         <img class="article-content__img" src="/img/ambrodjo.jpg" alt="Амбоджо">
-                        <h4>Бергоньоне, Амброджо</h4>
-                        <span>1453 – 1523</span>
-                        <p>Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа.
+                        <h4 tabindex="1">Бергоньоне, Амброджо</h4>
+                        <span tabindex="1">1453 – 1523</span>
+                        <p tabindex="1">Прозвище говорит о его тяготении к бургундской школе, по манере ему близок Винченцо Фоппа.
                             Испытал влияние Леонардо да Винчи. Наиболее известен работами 1486—1494 в монастырской
                             обители картезианцев Чертоза ди Павия. Позднее работал
                             в Милане в базилике Сант-Эусторджо и церкви Сан-Сатиро, после 1497 — в Лоди, в 1512 — в
@@ -468,9 +471,9 @@
                     </article>
                     <article class="article-content" data-target="vekietta">
                         <img class="article-content__img" src="/img/vekietta.jpg" alt="Веккьетта">
-                        <h4>Веккьетта</h4>
-                        <span>1412 – 6 июня 1480</span>
-                        <p>Веккьетта (итал. Il Vecchietta — «Старушонка»), настоящее имя Лоренцо ди Пьетро, итал.
+                        <h4 tabindex="1">Веккьетта</h4>
+                        <span tabindex="1">1412 – 6 июня 1480</span>
+                        <p tabindex="1">Веккьетта (итал. Il Vecchietta — «Старушонка»), настоящее имя Лоренцо ди Пьетро, итал.
                             Lorenzo di Pietro; ок. 1410, Сиена — 6 июня 1480, Сиена) — итальянский художник, скульптор,
                             архитектор и ювелир. Сиенская школа. О Веккьетте
                             сообщает в своих «Жизнеописаниях» Джорджо Вазари и описывает его как человека мрачного и
@@ -483,9 +486,9 @@
                     </article>
                     <ul id="accordion" class="ac--list">
                         <li class="ac--list__item">
-                            <div class="ac--list__item-top" tabindex="0">
-                                <h3>C 1400 по 1499 гг</h3>
-                                <button class="ac-list__item-btn" tabindex="-1"><svg width="18" height="11"
+                            <div class="ac--list__item-top">
+                                <h3 tabindex="0">C 1400 по 1499 гг</h3>
+                                <button class="ac-list__item-btn" tabindex="1"><svg width="18" height="11"
                                         viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"></path>
                                     </svg>
@@ -493,40 +496,62 @@
                             </div>
                             <div class="ac--list__iten-bottom">
                                 <div class="ac--list__iten-drawers">
-                                    <button class="ac--list__iten-tab" data-path="b.dibindo">Бенедетто ди Биндо</button>
-                                    <button class="ac--list__iten-tab" data-path="ambojo">Бергоньоне, Амброджо</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Биссоло, Франческо</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Больтраффио,
+                                    <button class="ac--list__iten-tab" data-path="b.dibindo" tabindex="0">Бенедетто ди Биндо</button>
+                                    <button class="ac--list__iten-tab" data-path="ambojo" tabindex="0">Бергоньоне, Амброджо</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Биссоло, Франческо</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Больтраффио,
                                         Джованни</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Бонсиньори,
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Бонсиньори,
                                         Франческо</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Боттичини, Рафаэлло</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Брамантино</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Бреа, Людовико</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Бьяджо д’Антонио
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Боттичини, Рафаэлло</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Брамантино</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Бреа, Людовико</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Бьяджо д’Антонио
                                         Туччи</button>
-                                    <button class="ac--list__iten-tab" data-path="vekietta">Веккьетта</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Андреа Верроккьо</button>
-                                    <button class="ac--list__iten-tab" data-path="d.girlandayo">Доменико
+                                    <button class="ac--list__iten-tab" data-path="vekietta" tabindex="0">Веккьетта</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Андреа Верроккьо</button>
+                                    <button class="ac--list__iten-tab" data-path="d.girlandayo" tabindex="0">Доменико
                                         Гирландайо</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Беноццо Гоццоли</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Граначчи, Франческо</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Грегорио ди Чекко</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Джованни да Удине</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Джованни ди Паоло</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Джорджоне</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Парентино, Бернардо</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Пезеллино</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Пьетро Перуджино</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Перуцци, Бальдассаре</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Пизанелло</button>
-                                    <button class="ac--list__iten-tab" data-path="another">Пинтуриккьо</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Беноццо Гоццоли</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Граначчи, Франческо</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Грегорио ди Чекко</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Джованни да Удине</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Джованни ди Паоло</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Джорджоне</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Парентино, Бернардо</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Пезеллино</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Пьетро Перуджино</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Перуцци, Бальдассаре</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Пизанелло</button>
+                                    <button class="ac--list__iten-tab" data-path="another" tabindex="0">Пинтуриккьо</button>
                                 </div>
                             </div>
                         </li>
                         <li class="ac--list__item">
-                            <div class="ac--list__item-top" tabindex="0">
-                                <h3>C 1500 по 1599 гг</h3>
+                            <div class="ac--list__item-top">
+                                <h3 tabindex="0">C 1500 по 1599 гг</h3>
+                                <button class="ac-list__item-btn" tabindex="1"><svg width="18" height="11"
+                                        viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="ac--list__iten-bottom">
+                                <div class="ac--list__iten-bottom">
+                                    <div class="ac--list__iten-bottom_empty">
+                                        <div class="empty"></div>
+                                        <div class="empty_txt">
+                                            <h3>Здесь пока пусто</h3>
+                                            <p>А в галерее вы всегда можете найти что-то интересное для себя</p>
+                                            <a href="#">В галерею</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ac--list__item">
+                            <div class="ac--list__item-top">
+                                <h3 tabindex="0">C 1600 по 1699 гг</h3>
                                 <button class="ac-list__item-btn" tabindex="-1"><svg width="18" height="11"
                                         viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"></path>
@@ -547,29 +572,7 @@
                             </div>
                         </li>
                         <li class="ac--list__item">
-                            <div class="ac--list__item-top" tabindex="0">
-                                <h3>C 1600 по 1699 гг</h3>
-                                <button class="ac-list__item-btn" tabindex="-1"><svg width="18" height="11"
-                                        viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="ac--list__iten-bottom">
-                                <div class="ac--list__iten-bottom">
-                                    <div class="ac--list__iten-bottom_empty">
-                                        <div class="empty"></div>
-                                        <div class="empty_txt">
-                                            <h3>Здесь пока пусто</h3>
-                                            <p>А в галерее вы всегда можете найти что-то интересное для себя</p>
-                                            <a href="#">В галерею</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="ac--list__item">
-                            <div class="ac--list__item-top" tabindex="0">
+                            <div class="ac--list__item-top">
                                 <h3>C 1700 по 1799 гг</h3>
                                 <button class="ac-list__item-btn" tabindex="-1"><svg width="18" height="11"
                                         viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -591,7 +594,7 @@
                             </div>
                         </li>
                         <li class="ac--list__item">
-                            <div class="ac--list__item-top" tabindex="0">
+                            <div class="ac--list__item-top">
                                 <h3>C 1800 по 1899 гг</h3>
                                 <button class="ac-list__item-btn" tabindex="-1"><svg width="18" height="11"
                                         viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -613,7 +616,7 @@
                             </div>
                         </li>
                         <li class="ac--list__item">
-                            <div class="ac--list__item-top" tabindex="0">
+                            <div class="ac--list__item-top">
                                 <h3>C 1900 по 1999 гг</h3>
                                 <button class="ac-list__item-btn" tabindex="-1"><svg width="18" height="11"
                                         viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -635,7 +638,7 @@
                             </div>
                         </li>
                         <li class="ac--list__item">
-                            <div class="ac--list__item-top" tabindex="0">
+                            <div class="ac--list__item-top">
                                 <h3>C 2000 г</h3>
                                 <button class="ac-list__item-btn" tabindex="-1"><svg width="18" height="11"
                                         viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
