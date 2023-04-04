@@ -140,7 +140,12 @@ new Swiper('.gallery__slider', {
         1600: {
             slidesPerView: 3,
             spaceBetween: 50,
-        },
+        }
+    },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false
     }
 
 });
@@ -200,6 +205,8 @@ selector.addEventListener("change", function (event) {
     //   gallerySlider.addSlide(index, el)
     // })
 });
+
+
 
 // ACCODION 
 

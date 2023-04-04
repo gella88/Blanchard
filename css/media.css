@@ -152,14 +152,10 @@
     background-color: var(--light-purple)
 }
 
-.slider-nav__btn-next:focus,
-.slider-nav__btn-prev:focus {
-    outline: 0
-}
-
 .slider-nav__btn-next:focus-visible,
 .slider-nav__btn-prev:focus-visible {
     border: 2px solid var(--black);
+    outline: 0
 }
 
 .slider-nav__btn-next:active,
@@ -177,9 +173,32 @@
     border: 2px solid var(--black);
 }
 
-.checkbox__label:hover span,
-.checkbox_input:focus+.label_custom_check {
+.check__text:hover {
+    color: var(--light-purple);
+}
+
+.checkbox:checked~.check__text:before {
     border-color: var(--light-purple);
+}
+
+.checkbox:checked~.check__text {
+    color: var(--light-purple);
+}
+
+.checkbox:active~.check__text:before {
+    border-color: var(--light-purple);
+}
+
+.checkbox:active~.check__text {
+    color: var(--light-purple);
+}
+
+.checkbox:focus~.check__text:before {
+    border-color: var(--light-purple);
+}
+
+.checkbox:focus~.check__text {
+    color: var(--light-purple);
 }
 
 /* CATALOG */

@@ -26,7 +26,7 @@
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                 </div>
-                <a class="logo">
+                <a href="/index.html" class="logo">
                     <img src="/img/Лого.svg" alt="логотип Blanchard">
                 </a>
                 <nav id="header_nav" class="header_nav">
@@ -260,8 +260,8 @@
         <!-- HERO BLOCK -->
         <section class="hero" role="banner">
             <div class="hero_content">
-                <div class="swiper-container swiper-container-hero swiper-initialized swiper-horizontal swiper-pointer-events"
-                    tabindex="0">
+                <div
+                    class="swiper-container swiper-container-hero swiper-initialized swiper-horizontal swiper-pointer-events">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide swiper-slide-1"></div>
                         <div class="swiper-slide swiper-slide-2"></div>
@@ -270,8 +270,9 @@
                 </div>
                 <div class="container hero_container">
                     <div class="hero_text">
-                        <h1>Прикоснитесь к&nbsp;прекрасному</h1>
-                        <p>Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт
+                        <h1 tabindex="0">Прикоснитесь к&nbsp;прекрасному</h1>
+                        <p tabindex="0">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
+                            создаёт
                             предпосылки для новых предложений.</p>
                         <button class="btn_mailing">Подписаться на рассылку</button>
                     </div>
@@ -284,8 +285,8 @@
         <!-- ABOUT US -->
         <section id="about" class="about">
             <div class="container about_container">
-                <h2>О нас</h2>
-                <p>Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно
+                <h2 tabindex="0">О нас</h2>
+                <p tabindex="0">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно
                     определяет каждого участника как&nbsp;способного принимать собственные решения касаемо
                     распределения внутренних резервов и ресурсов. Не&nbsp;следует,
                     однако, забывать, что&nbsp;высококачественный прототип будущего проекта влечет за собой процесс
@@ -317,82 +318,89 @@
                 <div class="gallery__header">
                     <h2 class="gallery__title section-title">Галерея</h2>
                     <!-- Filter -->
-                    <div class="filter gallery__filter" aria-expanded="false" role="listbox">
+                    <div class="filter gallery__filter" role="listbox">
                         <div>
                             <span class="filter__desc">Фильтр:</span>
-                            <select id="select" class="select" name="select" tabindex="0">
-                                <option value="selected" tabindex="0">Живопись</option>
-                                <option value="ris" tabindex="0">Рисунок</option>
-                                <option value="skulp" tabindex="0">Скульптура</option>
+                            <select id="select" class="select" name="select">
+                                <option value="selected">Живопись</option>
+                                <option value="ris">Рисунок</option>
+                                <option value="skulp">Скульптура</option>
                             </select>
                         </div>
                         <!-- CHECKBOX CUSTOM -->
-                        <div class="checkbox">
-                            <form class="checkbox_form" action="/">
-                                <label class="checkbox__label">
-                                    <input class="checkbox_input" type="checkbox" name="check">
-                                    <span class="checkbox_check"></span>
-                                    <span class="descrip_check">XIX век</span>
-                                </label>
-                                <label class="checkbox__label">
-                                    <input class="checkbox_input" type="checkbox" name="check">
-                                    <span class="checkbox_check"></span>
-                                    <span class="descrip_check">XX век</span>
-                                </label>
-                                <label class="checkbox__label">
-                                    <input class="checkbox_input" type="checkbox" name="check">
-                                    <span class="checkbox_check"></span>
-                                    <span class="descrip_check">Современность</span>
-                                </label>
-                            </form>
-                        </div>
+
+                        <form class="checkbox-container">
+                            <label class="check__label">
+                                <input type="checkbox" class="checkbox visually-hidden">
+                                <span class="check__text">XIX век</span>
+                            </label>
+                            <label class="check__label">
+                                <input type="checkbox" class="checkbox visually-hidden">
+                                <span class="check__text">XX век</span>
+                            </label>
+                            <label class="check__label">
+                                <input type="checkbox" class="checkbox visually-hidden">
+                                <span class="check__text">Современность</span>
+                            </label>
+                        </form>
                     </div>
                 </div>
-
                 <!-- Slider -->
-                <div class="gallery__slider" tabindex="0">
+                <div class="gallery__slider">
                     <div class="gallery__navigation slider-nav">
-                        <button class=" slider-nav__btn-prev gallery__btn--prev"></button>
+                        <button class=" slider-nav__btn-prev gallery__btn--prev" tabindex="-1"></button>
                         <span class="slider-nav__fraction gallery__fraction">N / N</span>
-                        <button class="slider-nav__btn-next gallery__btn--next"></button>
+                        <button class="slider-nav__btn-next gallery__btn--next" tabindex="0"></button>
                     </div>
                     <div class="gallery__list swiper-wrapper">
-                        <picture class="gallery__item swiper-slide" tabindex="1">
-                            <source class="gallery__img" srcset="/img/1_1024.jpg" media="(max-width: 1124px)">
-                            <source class="gallery__img" srcset="/img/1_768.jpg" media="(max-width: 1000px)">
-                            <source class="gallery__img" srcset="/img/1_320.jpg" media="(max-width: 660px)">
-                            <img class="gallery__img" src="/img/1.jpg" alt data-tab="ris">
-                        </picture>
-                        <picture class="gallery__item swiper-slide" tabindex="1">
-                            <source class="gallery__img" srcset="/img/2_1024.jpg" media="(max-width: 1124px)">
-                            <source class="gallery__img" srcset="/img/2_768.jpg" media="(max-width: 1000px)">
-                            <source class="gallery__img" srcset="/img/2_320.jpg" media="(max-width: 660px)">
-                            <img class="gallery__img" src="/img/2.jpg" alt data-tab="ris">
-                        </picture>
-                        <picture class="gallery__item swiper-slide" tabindex="1">
-                            <source srcset="/img/3_1024.jpg" media="(max-width: 1124px)">
-                            <source srcset="/img/3_768.jpg" media="(max-width: 1000px)">
-                            <source class="gallery__img" srcset="/img/3_320.jpg" media="(max-width: 660px)">
-                            <img class="gallery__img" src="/img/3.jpg" alt data-tab="ris">
-                        </picture>
-                        <picture class="gallery__item swiper-slide" tabindex="0">
-                            <source srcset="/img/4_1024.jpg" media="(max-width: 1124px)">
-                            <source srcset="/img/4_768.jpg" media="(max-width: 1000px)">
-                            <source class="gallery__img" srcset="/img/4_320.jpg" media="(max-width: 660px)">
-                            <img class="gallery__img" src="/img/4.jpg" alt data-tab="skulp">
-                        </picture>
-                        <picture class="gallery__item swiper-slide" tabindex="0">
-                            <source srcset="/img/5_1024.jpg" media="(max-width: 1124px)">
-                            <source srcset="/img/5_768.jpg" media="(max-width: 1000px)">
-                            <source class="gallery__img" srcset="/img/5_320.jpg" media="(max-width: 660px)">
-                            <img class="gallery__img" src="/img/5.jpg" alt data-tab="skulp">
-                        </picture>
-                        <picture class="gallery__item swiper-slide" tabindex="0">
-                            <source srcset="/img/6_1024.jpg" media="(max-width: 1124px)">
-                            <source srcset="/img/6_768.jpg" media="(max-width: 1000px)">
-                            <source class="gallery__img" srcset="/img/6_320.jpg" media="(max-width: 660px)">
-                            <img class="gallery__img" src="/img/6.jpg" alt data-tab="skulp">
-                        </picture>
+                        <button class="gallery__item swiper-slide" tabindex="0">
+                            <picture>
+                                <source class="gallery__img" srcset="/img/1_1024.jpg" media="(max-width: 1124px)">
+                                <source class="gallery__img" srcset="/img/1_768.jpg" media="(max-width: 1000px)">
+                                <source class="gallery__img" srcset="/img/1_320.jpg" media="(max-width: 660px)">
+                                <img class="gallery__img" src="/img/1.jpg" alt data-tab="ris">
+                            </picture>
+                        </button>
+                        <button class="gallery__item swiper-slide" tabindex="0">
+                            <picture>
+                                <source class="gallery__img" srcset="/img/2_1024.jpg" media="(max-width: 1124px)">
+                                <source class="gallery__img" srcset="/img/2_768.jpg" media="(max-width: 1000px)">
+                                <source class="gallery__img" srcset="/img/2_320.jpg" media="(max-width: 660px)">
+                                <img class="gallery__img" src="/img/2.jpg" alt data-tab="ris">
+                            </picture>
+                        </button>
+                        <button class="gallery__item swiper-slide" tabindex="0">
+                            <picture>
+                                <source srcset="/img/3_1024.jpg" media="(max-width: 1124px)">
+                                <source srcset="/img/3_768.jpg" media="(max-width: 1000px)">
+                                <source class="gallery__img" srcset="/img/3_320.jpg" media="(max-width: 660px)">
+                                <img class="gallery__img" src="/img/3.jpg" alt data-tab="ris">
+                            </picture>
+                        </button>
+                        <button class="gallery__item swiper-slide" tabindex="0">
+                            <picture>
+                                <source srcset="/img/4_1024.jpg" media="(max-width: 1124px)">
+                                <source srcset="/img/4_768.jpg" media="(max-width: 1000px)">
+                                <source class="gallery__img" srcset="/img/4_320.jpg" media="(max-width: 660px)">
+                                <img class="gallery__img" src="/img/4.jpg" alt data-tab="skulp">
+                            </picture>
+                        </button>
+                        <button class="gallery__item swiper-slide" tabindex="0">
+                            <picture>
+                                <source srcset="/img/5_1024.jpg" media="(max-width: 1124px)">
+                                <source srcset="/img/5_768.jpg" media="(max-width: 1000px)">
+                                <source class="gallery__img" srcset="/img/5_320.jpg" media="(max-width: 660px)">
+                                <img class="gallery__img" src="/img/5.jpg" alt data-tab="skulp">
+                            </picture>
+                        </button>
+                        <button class="gallery__item swiper-slide" tabindex="0">
+                            <picture>
+                                <source srcset="/img/6_1024.jpg" media="(max-width: 1124px)">
+                                <source srcset="/img/6_768.jpg" media="(max-width: 1000px)">
+                                <source class="gallery__img" srcset="/img/6_320.jpg" media="(max-width: 660px)">
+                                <img class="gallery__img" src="/img/6.jpg" alt data-tab="skulp">
+                            </picture>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -401,8 +409,8 @@
         <section id="catalog" class="catalog">
             <div class="container">
                 <div class="catalog_top">
-                    <h2>Каталог</h2>
-                    <p class="catalog_p">Акционеры крупнейших компаний, которые представляют собой яркий пример
+                    <h2 tabindex="0">Каталог</h2>
+                    <p class="catalog_p" tabindex="0">Акционеры крупнейших компаний, которые представляют собой яркий пример
                         континентально-европейского типа политической культуры, будут объявлены нарушающими
                         общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
                         стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом
@@ -416,8 +424,8 @@
                             <div class="article-content__img article-content__img_empty"><img
                                     src="/img/drawers_empty.svg" alt></div>
                             <div class="article-content_empty_txt">
-                                <h3>Что мы о нём знаем?</h3>
-                                <p>Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+                                <h3>Что мы о нём знаем?</h3>
+                                <p>Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
                                 <a href="#">В галерею</a>
                             </div>
                         </div>
@@ -862,11 +870,11 @@
                 <form class="form_footer" action="#" id="form_footer" autocomplete="off">
                     <div class="form__fields">
                         <input type="text" class="footer_form__input form-control" placeholder="Имя*" autocomplete="off"
-                            name="name" id="name" />
+                            name="name" id="name">
                     </div>
                     <div class="form__fields">
                         <input type="tel" class="footer_form__input form-control" placeholder="Телефон*"
-                            autocomplete="off" name="phone" id="phone" />
+                            autocomplete="off" name="phone" id="phone">
                     </div>
                     <button class="footer_btn__submit" type="submit">Заказать обратный звонок</button>
                 </form>
@@ -925,8 +933,8 @@
                     <ul class="footer_social2">
                         <li class="footer_social2_li">
                             <a href="#" class="footer_social2_li_ref">
-                                <svg class="footer_social2_li_svg" width="45" height="45" viewBox="0 0 45 45" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="footer_social2_li_svg" width="45" height="45" viewBox="0 0 45 45"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222 29.6503C38.5495 30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072 25.6677 27.8636C25.3008 28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354 15.4478C6.46665 14.627 6.73642 14.1878 7.64194 14.1707C9.14639 14.1417 10.6508 14.1454 12.1553 14.1694C12.7676 14.179 13.1727 14.5294 13.4079 15.1071C14.2209 17.1074 15.2176 19.0105 16.4665 20.7755C16.7994 21.2455 17.1391 21.7142 17.623 22.0461C18.157 22.4125 18.5639 22.2915 18.8158 21.6953C18.9769 21.3164 19.0464 20.9113 19.0814 20.5053C19.2011 19.1145 19.2153 17.7242 19.0082 16.339C18.8793 15.4722 18.3918 14.9124 17.5277 14.7485C17.0876 14.6652 17.152 14.5022 17.3661 14.2508C17.7376 13.8163 18.0856 13.5474 18.7812 13.5474L23.9893 13.5465C24.8101 13.7076 24.9942 14.0759 25.1056 14.9027L25.1102 20.6903C25.1006 21.0103 25.2709 21.9586 25.8454 22.1681C26.3058 22.32 26.6096 21.9508 26.8849 21.6594C28.1339 20.334 29.0237 18.7697 29.8206 17.1506C30.1723 16.4366 30.4757 15.6978 30.7703 14.9575C30.9895 14.4101 31.3301 14.1408 31.9479 14.15L36.9631 14.156C37.1108 14.156 37.2609 14.1574 37.4073 14.1827C38.2525 14.3273 38.4841 14.6909 38.2226 15.5154C37.811 16.8109 37.0114 17.89 36.2297 18.9718C35.3919 20.1301 34.4983 21.2478 33.6687 22.4111C32.9064 23.4746 32.9667 24.01 33.9132 24.9335Z"
                                         fill="#CACACA" />
@@ -935,8 +943,8 @@
                         </li>
                         <li class="footer_social2_li">
                             <a href="#" class="footer_social2_li_ref">
-                                <svg class="footer_social2_li_svg" width="45" height="45" viewBox="0 0 45 45" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="footer_social2_li_svg" width="45" height="45" viewBox="0 0 45 45"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M19.279 14.9859C19.279 16.8409 20.7828 18.3449 22.6379 18.3449C24.4929 18.3449 25.9967 16.8409 25.9967 14.9859C25.9967 13.1309 24.4929 11.6271 22.6379 11.6271C20.7828 11.6271 19.279 13.1309 19.279 14.9859Z"
                                         fill="#CACACA" />

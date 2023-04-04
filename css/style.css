@@ -105,6 +105,19 @@ p {
     outline: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* header */
 /* first-header */
 
@@ -705,7 +718,6 @@ p {
 .gallery__filter {
     display: flex;
     height: 100%;
-
     flex-direction: column;
     justify-content: space-between;
 }
@@ -720,7 +732,6 @@ p {
 
 .gallery__item {
     position: relative;
-    /* max-width: 350px; */
     height: 350px;
     cursor: url(/img/cursor.png), auto;
     transition: .3s opacity, 0s border-color;
@@ -731,7 +742,7 @@ p {
 }
 
 .gallery__item:focus {
-    border-color: var(--outline-color);
+    border-color: var(--hard-purple);
     outline: 0
 }
 
@@ -765,10 +776,6 @@ p {
     transition: .3s ease-in-out;
 }
 
-.gallery__item.swiper-slide {
-    margin-right: 30px;
-}
-
 .gallery__img {
     object-fit: cover;
     height: 100%;
@@ -779,14 +786,6 @@ p {
     padding-top: 24px;
     padding-bottom: 29px;
     margin-left: 2px;
-}
-
-.gallery__note {
-    grid-area: note;
-    align-self: flex-end;
-    max-width: 360px;
-    margin-bottom: -11px;
-    line-height: 32px
 }
 
 .slider-nav {
@@ -923,40 +922,34 @@ p {
     padding: 3px 0 0 16px;
 }
 
-.checkbox {
-    display: flex;
-}
-
-.checkbox form {
+.checkbox-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
-.checkbox_input {
-    display: none;
-}
-
-.checkbox__label {
-    cursor: url(/img/cursor.png), auto;
+.check__text {
     position: relative;
+    padding-left: 23px;
+    cursor: url(/img/cursor.png), auto;
+    transition: color .3s ease-in-out;
 }
 
-.checkbox_check {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 10px;
-    left: -1;
-    width: 12px;
-    height: 12px;
-    border: 1px solid #fff;
-}
-
-.checkbox_check::before {
+.check__text:before {
     content: "";
     position: absolute;
-    left: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--white);
+    transition: border-color .3s ease-in-out;
+}
+
+.check__text:after {
+    content: "";
+    position: absolute;
+    left: 6px;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 4px;
@@ -968,26 +961,8 @@ p {
     transition: opacity .3s ease-in-out;
 }
 
-.checkbox_input:checked+.checkbox_check::before {
+.checkbox:checked~.check__text:after {
     opacity: 1;
-}
-
-.checkbox_input:checked+.checkbox_check {
-    border-color: var(--light-purple);
-}
-
-.checkbox_input:checked+span+.descrip_check {
-    color: var(--light-purple);
-}
-
-
-
-.checkbox_input:focus+.checkbox_check+.descrip_check {
-    color: var(--light-purple);
-}
-
-.descrip_check {
-    padding-left: 23px;
 }
 
 /* CATALOG */
