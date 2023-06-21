@@ -1,12 +1,12 @@
 // BURGER-MENU
 window.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#burger').addEventListener('click', function () {
-        document.querySelector('#header_nav').classList.add('header_nav_active')
+        document.querySelector('#nav').classList.add('nav_active')
     })
 });
 window.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.burger_active').addEventListener('click', function () {
-        document.querySelector('#header_nav').classList.remove('header_nav_active')
+        document.querySelector('#nav').classList.remove('nav_active')
     })
 });
 
@@ -44,12 +44,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
 // DROPDOWN MENU - SECOND NAVIGATION
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".list--item__btn").forEach(item => {
+    document.querySelectorAll(".second_nav_btn").forEach(item => {
         item.addEventListener("click", function () {
             let btn = this;
             let dropdown = this.parentElement.querySelector(".container--dropdown");
 
-            document.querySelectorAll(".list--item__btn").forEach(el => {
+            document.querySelectorAll(".second_nav_btn").forEach(el => {
                 if (el != btn) {
                     el.classList.remove("active--btn");
                 }
@@ -57,21 +57,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
             document.querySelectorAll(".container--dropdown").forEach(el => {
                 if (el != dropdown) {
-                    el.classList.remove("active-list--item");
+                    el.classList.remove("active_second_nav_item");
                 }
             })
-            dropdown.classList.toggle("active-list--item");
+            dropdown.classList.toggle("active_second_nav_item");
             btn.classList.toggle("active--btn")
         })
     })
 
     document.addEventListener("click", function (e) {
         let target = e.target;
-        if (!target.closest(".list")) {
+        if (!target.closest(".second_nav_list")) {
             document.querySelectorAll(".container--dropdown").forEach(el => {
-                el.classList.remove("active-list--item");
+                el.classList.remove("active_second_nav_item");
             })
-            document.querySelectorAll(".list--item__btn").forEach(el => {
+            document.querySelectorAll(".second_nav_btn").forEach(el => {
                 el.classList.remove("active--btn");
             });
         }
@@ -141,6 +141,11 @@ new Swiper('.gallery__slider', {
             slidesPerView: 3,
             spaceBetween: 50,
         }
+    },
+
+    a11y: {
+        prevSlideMessage: 'предыдущий слайд',
+        nextSlideMessage: 'следующий слайд',
     },
 
     keyboard: {

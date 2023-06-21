@@ -1,5 +1,5 @@
-.header_nav_ul_link,
-.list--item__btn {
+.nav_link,
+.second_nav_btn {
     padding: 2px 5px 4px 5px;
     transition: all .3s ease-in-out;
 }
@@ -10,20 +10,18 @@
     padding: 4px 6px;
 }
 
-.header_nav_ul_link:focus,
+.nav_link:focus,
 .btn_lk:focus-visible,
-.second_nav_menu p:focus-visible,
-.list--item__btn:focus-visible,
-.list--item__btn_svg:focus-visible {
+.second_nav_btn:focus-visible,
+.second_nav_svg:focus-visible {
     background-color: var(--hard-purple);
     color: var(--white);
 }
 
-.header_nav_ul_link:hover,
+.nav_link:hover,
 .btn_lk:hover,
 .btn_lk:hover path,
-.second_nav_menu p:hover,
-.list--item__btn:hover {
+.second_nav_btn:hover {
     color: var(--light-purple);
     fill: var(--light-purple);
 }
@@ -34,34 +32,33 @@
     fill: var(--hard-purple);
 }
 
-.list--item__btn path {
+.second_nav_btn path {
     transition: all .3s ease-in-out;
 }
 
-.active--btn.list--item__btn:active {
+.active--btn.second_nav_btn:active {
     color: var(--hard-purple);
 }
 
-.list--item__btn:hover:not(:focus-visible) .list--item__btn_svg path {
+.second_nav_btn:hover:not(:focus-visible) .second_nav_svg path {
     stroke: var(--purple);
 }
 
-.list--item__btn:active:not(:focus) .list--item__btn_svg path {
+.second_nav_btn:active:not(:focus) .second_nav_svg path {
     stroke: var(--hard-purple);
 }
 
-.list--item__btn:hover path {
+.second_nav_btn:hover path {
     stroke: var(--light-purple);
 }
 
-.list--item__btn:active,
-.list--item__btn:active path {
+.second_nav_btn:active,
+.second_nav_btn:active path {
     color: var(--hard-purple);
     stroke: var(--hard-purple);
 }
 
-.header_nav_ul_link:active,
-.second_nav_menu p:active {
+.nav_link:active {
     color: var(--hard-purple);
     background-color: transparent;
 }
@@ -413,31 +410,31 @@
 
 .footer_social2_li_svg:hover path,
 .footer_social2_li_svg:focus-visible path {
-    fill: var(--white);}
+    fill: var(--white);
+}
 
 .footer_social2_li_svg:active path {
     fill: var(--purple);
 }
 
 @media (max-width: 1336px) {
-    .header {
-        margin-bottom: 48px;
-    }
 
     .second_nav,
     .btn_lk {
         display: none;
     }
 
-    .header_nav {
+    .nav {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: absolute;
         top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         z-index: 10;
         margin: 0;
-        left: 0;
         width: 100%;
         min-height: 800px;
         background-color: rgba(0, 0, 0, 0.9);
@@ -452,13 +449,13 @@
         padding: 97px 0 50px 43px;
     }
 
-    .header_nav_ul {
+    .nav_list {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .header_nav_ul a {
+    .nav_link {
         font-family: "Open Sans", sans-serif;
         font-weight: 500;
         font-size: 24px;
@@ -466,7 +463,7 @@
         letter-spacing: 1px;
     }
 
-    .header_nav.header_nav_active {
+    .nav.nav_active {
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
         transform: translateX(0);
@@ -477,7 +474,8 @@
         margin-right: 28px;
     }
 
-    .logo img {
+    .logo_img {
+        margin-right: 10px;
         width: 187px;
     }
 
@@ -500,7 +498,7 @@
 
     /* FORM SEARCH */
     .header_search {
-        position: static;
+        display: flex;
         overflow: hidden;
     }
 
@@ -510,11 +508,12 @@
     }
 
     .nav_form {
-        width: 0;
+        display: none;
         z-index: 5;
         padding: 5px;
         opacity: 0;
         position: relative;
+        align-items: center;
         transition: transform .9s ease-in-out;
         transform: translate(150%);
     }
@@ -525,23 +524,30 @@
         border-bottom: 1px solid #FFFFFF;
         outline: none;
         opacity: 0.85;
-        width: 218px;
-        padding-bottom: 6px;
+        max-width: 218px;
+        width: 100%;
+        padding-bottom: 4px;
         display: inline-block;
         z-index: 3;
         cursor: url(/img/cursor.png);
         font-size: 18px;
+        margin: 0 53px 0 0;
     }
 
     .nav_form_active {
-        background: none;
+        background: var(--black);
         transform: translate(0);
         opacity: 1;
         width: 314px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        align-items: baseline;
         position: absolute;
+        top: 25px;
+            right: 45px;
         padding: 0;
-        top: 24%;
-        right: 5%;
     }
 
     .input_search.active {
@@ -561,14 +567,19 @@
 
     .search_x {
         position: absolute;
-        top: 45%;
-        right: 3%;
+        top: 40%;
+        right: 1.5%;
     }
 
     .btn_search_submit {
         position: relative;
         top: 10px;
-        left: -6px;
+        left: 3px;
+    }
+
+    .search_x_svg {
+        width: 24px;
+        height: 24px;
     }
 
     .header_search {
@@ -600,41 +611,11 @@
         margin-right: 3px;
     }
 
-    .hero_container {
-        padding-top: 157px;
-    }
-
-    .hero_text {
-        max-width: 80%;
-        margin-left: 0;
-    }
-
-    .hero_content {
-        padding-bottom: 114px;
-    }
-
-    .hero_content p {
-        margin-top: -10px;
-        margin-bottom: 133px;
-    }
-
-    .swiper-slide-1 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2_1024.jpg);
-    }
-
-    .swiper-slide-2 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_4_1024.jpg);
-    }
-
-    .swiper-slide-3 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_5_1024.jpg);
-    }
-
-    .about .container {
+    .about_container {
         padding-left: 50px;
     }
 
-    .about_container p {
+    .about_desc {
         max-width: 100%;
     }
 
@@ -668,15 +649,15 @@
     }
 
     .catalog {
-        margin-bottom: 81px;
+        margin-bottom: 80px;
     }
 
-    .catalog .container {
+    .catalog_container {
         padding-left: 48px;
         padding-right: 46px;
     }
 
-    .catalog_p {
+    .catalog_top_desc {
         min-width: 100%;
     }
 
@@ -693,7 +674,7 @@
         max-width: 437px;
     }
 
-    .article-content p {
+    .article-content_desc {
         padding-top: 10px;
     }
 
@@ -706,10 +687,6 @@
         margin-top: 0;
         padding-bottom: 32px;
         padding-top: 31px;
-    }
-
-    .ac--list__iten-tab {
-        line-height: 1.3;
     }
 
     .empty {
@@ -725,11 +702,11 @@
         padding-top: 25px;
     }
 
-    .empty_txt p {
+    .empty_txt_desc {
         max-width: 100%;
     }
 
-    .empty_txt h3 {
+    .empty_txt_title {
         padding-top: 11px;
     }
 
@@ -737,12 +714,12 @@
         height: 683px;
     }
 
-    .swiper-slide_event span {
+    .swiper-slide_event_address {
         text-align: end;
-        padding: 5px 32px 0 0;
+        padding: 3px 32px 0 0;
     }
 
-    .event .container {
+    .event_container {
         padding-left: 49px;
     }
 
@@ -755,17 +732,13 @@
         max-height: 436px;
     }
 
-    .event_content h3 {
+    .event_content_title {
         margin-bottom: 7px;
         max-width: 100%;
     }
 
-    .event_content p {
+    .event_content_desc {
         width: 100%;
-    }
-
-    .events_link {
-        bottom: 70px;
     }
 
     .swiper-pagination-bullet {
@@ -781,7 +754,7 @@
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         width: 100%;
         position: initial;
-        padding-top: 20px;
+        padding-top: 18px;
     }
 
     .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -799,21 +772,21 @@
         display: none;
     }
 
-    .event .container {
+    .event_container {
         margin-bottom: 69px;
     }
 
     /* PROJECTS 1336 */
 
     .project {
-        margin-bottom: 80px;
+        margin-bottom: 81px;
     }
 
-    .project .container {
+    .project_container {
         padding-left: 50px;
     }
 
-    .project p {
+    .project_container_desc {
         max-width: 100%;
     }
 
@@ -826,7 +799,7 @@
         max-height: 128px;
     }
 
-    .swiper-slide_project img {
+    .swiper-slide_project_img {
         max-width: 85%;
     }
 
@@ -834,18 +807,18 @@
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        padding: 43px 30px 33px 50px;
+        padding: 43px 30px 43px 50px;
     }
 
     .address {
         margin-bottom: 22px;
     }
 
-    .address h3 {
+    .address_title {
         margin-bottom: 5px;
     }
 
-    .address address {
+    address {
         font-size: 14px;
     }
 
@@ -867,7 +840,7 @@
         padding-right: 50px;
     }
 
-    .footer_social2_li svg {
+    .footer_social2_li_svg {
         width: 60px;
         height: 60px;
     }
@@ -876,6 +849,49 @@
 @media (max-width: 1024px) {
     .container {
         max-width: 1024px;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .nav {
+        min-height: 768px;
+    }
+
+    .hero_container {
+        padding-top: 157px;
+    }
+
+    .hero_text {
+        max-width: 80%;
+        margin-left: 0;
+    }
+
+    .hero_content {
+        padding-bottom: 114px;
+    }
+
+    .hero_desc {
+        margin-top: -10px;
+        margin-bottom: 133px;
+    }
+
+    .swiper-slide-1 {
+        background-image: url(/img/hero2_1024.jpg);
+    }
+
+    .swiper-slide-2 {
+        background-image: url(/img/hero4_1024.jpg);
+    }
+
+    .swiper-slide-3 {
+        background-image: url(/img/hero5_1024.jpg);
+    }
+
+    .ac--list__iten-drawers {
+        margin: 0 4px 0 -1px;
+        align-content: space-between;
     }
 
     .swiper-button-prev_project {
@@ -887,11 +903,50 @@
     }
 
     .events_link {
-        bottom: 49px;
+        bottom: 44px;
+        left: 34px;
+        padding-left: 0;
     }
+
+
 }
 
 @media (max-width: 1000px) {
+    .nav_form_active {
+        padding: 15px;
+        top: 10%;
+    }
+
+    .nav {
+        min-height: 768px;
+    }
+
+    .nav_form_active {
+        width: 100%;
+        right: -3.5%;
+    }
+
+    .search_x {
+        right: 11.5%;
+        top: 35%;
+    }
+
+    .search_x_svg {
+        width: 29px;
+        height: 29px;
+    }
+
+    .search_x {
+        right: 10%
+    }
+
+    .input_search {
+        max-width: 768px;
+        width: 100%;
+        margin: 0 113px 0 0;
+        padding-bottom: 6px;
+    }
+
     .gallery {
         min-height: 889px;
         margin-bottom: 80px;
@@ -904,11 +959,6 @@
 
     .gallery__slider {
         flex-direction: column;
-    }
-
-    .gallery__header {
-        margin-bottom: 15px;
-        max-width: 280px;
     }
 
     .gallery__filter {
@@ -938,7 +988,7 @@
         padding-bottom: 25px;
     }
 
-    .empty_txt p {
+    .empty_txt_desc {
         width: 74%;
     }
 
@@ -961,11 +1011,17 @@
         flex-direction: column-reverse;
     }
 
+    .btn_lk_mobile {
+        position: absolute;
+        left: 6%;
+        bottom: 50px;
+    }
+
     .hero_content {
         max-height: 768px;
     }
 
-    .hero_content p {
+    .hero_desc {
         max-width: 100%;
         margin-bottom: 134px;
     }
@@ -974,7 +1030,7 @@
         max-width: 100%;
     }
 
-    .header_search svg {
+    .header_search_svg {
         width: 27.5px;
         height: 27.5px;
     }
@@ -983,21 +1039,26 @@
         right: 6.5%;
     }
 
-    .btn_lk_mobile {
-        position: absolute;
-        left: 6.8%;
+    .input_search {
+        max-width: 768px;
+        width: 78%;
     }
 
     .swiper-slide-1 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2_768.jpg);
+        background-image: url(/img/hero2_768.jpg);
     }
 
     .swiper-slide-2 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_4_768.jpg);
+        background-image: url(/img/hero4_768.jpg);
     }
 
     .swiper-slide-3 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_5_768.jpg);
+        background-image: url(/img/hero5_768.jpg);
+    }
+
+    .gallery__header {
+        margin-bottom: 15px;
+        max-width: 281px;
     }
 
     .ac--list {
@@ -1006,8 +1067,12 @@
         margin-bottom: 51px;
     }
 
-    .catalog_p {
+    .catalog_top_desc {
         margin-bottom: 20px;
+    }
+
+    .ac--list__item-top {
+        margin: 0;
     }
 
     .ac--list__iten-drawers {
@@ -1017,35 +1082,46 @@
     .article-content__img {
         max-width: 668px;
         width: 668px;
-        margin-bottom: 10px;
+        margin: -2px 0 9px 0;
     }
 
-    .article-content p {
+    .article-content {
+        max-width: 100%;
+    }
+
+    .article-content_desc {
         padding-top: 0px;
-        min-width: 668px;
+        max-width: 105%;
+        width: 768px;
+    }
+
+    .event_container {
+        margin-bottom: 71px;
     }
 
     .event_img {
         max-height: 200px;
     }
 
-    .event h2 {
-        margin-bottom: 13px;
-    }
-
-    .swiper-slide_event span {
-        padding: 5px 15px 0 0;
-    }
-
-    .event_content h3 {
-        margin-bottom: 5px;
+    .event_title {
+        margin-bottom: 15px;
     }
 
     .events_link {
-        bottom: 48px;
+        bottom: 44px;
+        left: 28px;
     }
 
-    .project p {
+    .swiper-slide_event_address {
+        padding: 5px 15px 0 0;
+    }
+
+    .event_content_title {
+        padding-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .project_container_desc {
         padding-right: 6px;
         margin-bottom: 28px;
     }
@@ -1062,7 +1138,7 @@
         max-height: 106px;
     }
 
-    .project h3 {
+    .project_title {
         margin-bottom: 29px;
     }
 
@@ -1094,7 +1170,7 @@
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 720px) {
     .header {
         height: 355px;
         margin-bottom: 37px;
@@ -1110,7 +1186,7 @@
         margin: 0;
     }
 
-    .logo img {
+    .logo_img {
         width: 97px;
     }
 
@@ -1119,19 +1195,19 @@
         height: 18px;
     }
 
-    .burger .burger-line {
+    .burger-line {
         height: 2px;
     }
 
-    .burger .burger-line:nth-child(2) {
+    .burger-line:nth-child(2) {
         width: 65%;
     }
 
-    .burger .burger-line:nth-child(3) {
+    .burger-line:nth-child(3) {
         width: 41%;
     }
 
-    .header_search svg {
+    .header_search_svg {
         width: 18px;
         height: 27.5px;
     }
@@ -1143,11 +1219,37 @@
         top: 17%;
     }
 
+    .nav_form_active {
+        padding: 10px 0;
+        top: -8%;
+    }
+
+    .search_x {
+        top: 42%;
+    }
+
+    .search_x_svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .btn_search_submit_svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .input_search {
+        max-width: 320px;
+        width: 75%;
+        margin: 0 55px 0 0;
+        padding-bottom: 6px;
+    }
+
     .hero_container {
         padding-top: 54px;
     }
 
-    .hero_content p {
+    .hero_desc {
         margin: 0;
         font-weight: 400;
         font-size: 12px;
@@ -1156,7 +1258,7 @@
         margin-bottom: 41px;
     }
 
-    .hero_text h1 {
+    .hero_title {
         font-weight: 700;
         font-size: 32px;
         line-height: 44px;
@@ -1181,18 +1283,18 @@
         margin-bottom: 41px;
     }
 
-    .about_container h2 {
+    .about_title {
         font-size: 28px;
         margin-bottom: -2px;
     }
 
-    .about_container p {
+    .about_desc {
         font-size: 14px;
         line-height: 28px;
         max-width: 100%;
     }
 
-    .about .container {
+    .about_container {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -1212,16 +1314,13 @@
         padding-top: 6px;
     }
 
-    .choices__inner {
-        min-width: 290px;
-    }
-
     .choices[data-type*=select-one]:after {
         right: 6.7%;
     }
 
     .gallery__filter {
         height: 205px;
+        width: 290px;
         margin-bottom: 14px;
     }
 
@@ -1235,16 +1334,16 @@
         max-width: 290px;
     }
 
-    .catalog h2 {
+    .catalog_top_title {
         margin-bottom: -2px;
         font-size: 28px;
     }
 
-    .catalog_p {
+    .catalog_top_desc {
         display: none;
     }
 
-    .ac--list__item-top h3 {
+    .ac--list__item-top_title {
         font-size: 18px;
     }
 
@@ -1272,11 +1371,11 @@
         margin-right: 30px;
     }
 
-    .empty_txt h3 {
+    .empty_txt_title {
         font-size: 18px;
     }
 
-    .empty_txt p {
+    .empty_txt_desc {
         width: 100%;
     }
 
@@ -1284,13 +1383,35 @@
         padding-top: 49px;
         padding-bottom: 49px;
     }
+
+    .catalog {
+        margin-bottom: 37px;
+    }
+
+    .event_title {
+        font-size: 28px;
+        margin-bottom: -2px;
+    }
+
+    .event_content {
+        padding: 4px 23px 49px 23px;
+
+    }
+
+    .event_container {
+        margin-bottom: 27px;
+    }
+
+    .project_container_title {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 320px) {
     .container {
         max-width: 320px;
         padding-left: 15px;
-        padding-right: 16px;
+        padding-right: 14px;
     }
 
     .hero_text {
@@ -1301,21 +1422,29 @@
         margin-left: 2px;
     }
 
-    .hero_content p {
+    .hero_desc {
         max-width: 86%;
         text-align: center;
     }
 
     .swiper-slide-1 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2_320jpg);
+        background-image: url(/img/hero2_320jpg);
     }
 
     .swiper-slide-2 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_4_320.jpg);
+        background-image: url(/img/hero4_320.jpg);
     }
 
     .swiper-slide-3 {
-        background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash_5_320.jpg);
+        background-image: url(/img/hero5_320.jpg);
+    }
+
+    .gallery {
+        padding: 38px 0px 0px 0;
+    }
+
+    .choices__inner {
+        width: 290px;
     }
 
     .gallery__item {
@@ -1336,7 +1465,12 @@
         height: 29px;
     }
 
-    .ac-list__item-btn svg {
+    .ac--list__item-top {
+        padding-bottom: 20px;
+        padding-top: 18px;
+    }
+
+    .ac-list__item-btn_svg {
         max-width: 9px;
     }
 
@@ -1346,11 +1480,28 @@
 
     .article-content {
         max-width: 100%;
+        margin-right: 0;
     }
 
-    .article-content p {
+    .article-content__img {
+        margin: 9px 0 10px -2px
+    }
+
+    .article-content_desc {
         padding-top: 4px;
         min-width: 290px;
         max-width: 100%;
+    }
+
+    .swiper-slide_event_address {
+        padding: 7px 15px 0 0;
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        padding-top: 8px;
+    }
+
+    .project_container_title {
+        margin-bottom: -2px;
     }
 }
