@@ -2,6 +2,7 @@
 .btn_search {
   padding: 4px 5px;
   transition: all .3s ease-in-out;
+  margin: 0px -5px -5px 0;
 }
 
 .logo:focus,
