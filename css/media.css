@@ -18,6 +18,11 @@
   fill: var(--light-purple);
 }
 
+.header__search__svg {
+  transition: all .5s ease-in-out;
+}
+
+
 .nav__link:active,
 .header__search__svg:active path,
 .header__search__svg:active rect {
@@ -75,7 +80,7 @@
 
 .events-link {
   padding: 2px 5px 4px 5px;
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .events-link:hover {
@@ -134,6 +139,11 @@
   opacity: 0.5;
 }
 
+.footer__social1__ul__li,
+.footer__social1__ul__li__ref {
+  transition: opacity .8s ease-in-out;
+}
+
 .footer__social1__ul__li__ref:active::before,
 .footer__social1__ul__li:active {
   opacity: 1;
@@ -141,6 +151,7 @@
 
 .footer__social2__li__svg:hover path,
 .footer__social2__li:focus path {
+  transition: all .8s ease-in-out;
   fill: var(--white);
 }
 
@@ -181,18 +192,17 @@
 @media (max-width: 1336px) {
   .header {
     margin-bottom: 80px;
-    height: 768px;
+    min-height: 768px;
   }
 
   .header__container {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 32px;
-    padding-bottom: 19px;
   }
 
   .header__top {
-    height: 147px;
+    padding-top: 31px;
+    padding-bottom: 17px;
   }
 
   .logo {
@@ -203,13 +213,17 @@
   .btn-search {
     position: absolute;
     padding-top: 5px;
-    top: 34px;
+    top: 30px;
     right: 49px;
   }
 
+  .navigation {
+    width: 112.5%;
+  }
+
   .nav {
-    width: 101%;
     margin-left: -5px;
+    padding-top: 20px;
   }
 
   .hero__title {
@@ -291,7 +305,7 @@
 
   .event__content__desc {
     margin-bottom: 19px;
-    max-width: 100%;
+    max-width: 91%;
   }
 
   .project__container__title {
@@ -397,6 +411,14 @@
     max-width: 768px;
   }
 
+  .header__top {
+    padding-bottom: 17px;
+  }
+
+  .navigation {
+    width: 116.5%;
+  }
+
   .hero {
     background-image: url(/img/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2768.jpg );
   }
@@ -481,24 +503,24 @@
   }
 
   .header {
-    height: 388px;
+    min-height: 388px;
     margin-bottom: 37px;
   }
 
   .header__top {
-    height: 78px;
-    margin-bottom: 37px;
+    padding-top: 16px;
+    padding-bottom: 3px;
   }
 
   .header__container {
-    padding-top: 16px;
-    padding-bottom: 12px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .logo {
     background-size: contain;
     width: 96.9px;
-    min-height: 22px;
+    height: 22px;
     margin-bottom: 0px;
   }
 
@@ -507,25 +529,26 @@
     height: 18px;
   }
 
-  .nav__item {
-    font-weight: 700;
-    font-size: 12px;
+  .navigation {
+    overflow-y: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 
   .nav {
-    min-width: 431px;
-    flex-wrap: nowrap;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    white-space: nowrap;
+    min-width: 431px; 
+    overflow-x: auto;
+    padding-top: 5px;
+    margin-bottom: 0;
   }
 
   .nav__item {
+    font-weight: 700;
+    font-size: 12px;
     display: inline-block;
-  }
-
-  .nav::-webkit-scrollbar {
-    display: none;
   }
 
   .nav__item:not(:last-child) {
@@ -533,8 +556,8 @@
   }
 
   .btn-search {
-    top: 13px;
-    right: 10px;
+    top: 11px;
+    right: 15px;
   }
 
   .hero {
@@ -568,8 +591,8 @@
 
   .btn-mailing {
     font-size: 12px;
-    width: 200px;
-    height: 40px;
+    min-width: 200px;
+    min-height: 40px;
     text-align: center;
     letter-spacing: 0.5px;
     padding: 11px 15px 14px 19px;
@@ -621,6 +644,10 @@
 
   .gallery__item:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  .event__content__desc {
+    max-width: 100%;
   }
 
   .project__partners {
